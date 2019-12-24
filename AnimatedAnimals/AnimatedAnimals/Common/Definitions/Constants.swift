@@ -11,13 +11,11 @@ import Foundation
 
 /// ---> API and params for test images <--- ///
 let testApi         = "https://images.pexels.com/photos"
-let compressParam   = "auto=compress&cs=tinysrgb&dpr=2&h=480&w=640"
+let compressParam   = "auto=compress&cs=tinysrgb&dpr=1&w=500"
 
 
 /// ---> Paths for test images <--- ///
-let testCats = ["932261/pexels-photo-932261.jpeg",
-                  "36451/cat-meadow-cute-funny.jpg",
-                  "2612982/pexels-photo-2612982.jpeg",
+let testCats = ["2612982/pexels-photo-2612982.jpeg",
                   "69932/tabby-cat-close-up-portrait-69932.jpeg",
                   "399647/pexels-photo-399647.jpeg",
                   "1183434/pexels-photo-1183434.jpeg",
@@ -48,8 +46,7 @@ let testDogs = ["2853422/pexels-photo-2853422.jpeg",
                 "1619690/pexels-photo-1619690.jpeg",
                 "235805/pexels-photo-235805.jpeg"]
 
-let testParrots = ["1453550/pexels-photo-1453550.jpeg",
-                   "40984/animal-ara-macao-beak-bird-40984.jpeg",
+let testParrots = ["40984/animal-ara-macao-beak-bird-40984.jpeg",
                    "1059823/pexels-photo-1059823.jpeg",
                    "2317904/pexels-photo-2317904.jpeg",
                    "135940/pexels-photo-135940.jpeg",
@@ -58,3 +55,7 @@ let testParrots = ["1453550/pexels-photo-1453550.jpeg",
                    "531495/pexels-photo-531495.jpeg",
                    "1427457/pexels-photo-1427457.jpeg",
                    "3029731/pexels-photo-3029731.jpeg"]
+
+let testFoxes = ["2295744/pexels-photo-2295744.jpeg",
+                 "2622290/pexels-photo-2622290.jpeg",
+                 "1821688/pexels-photo-1821688.jpeg"]

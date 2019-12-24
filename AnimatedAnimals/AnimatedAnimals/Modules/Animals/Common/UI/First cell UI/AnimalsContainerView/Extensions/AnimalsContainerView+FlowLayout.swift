@@ -1,0 +1,47 @@
+//
+//  AnimalsContainerView+FlowLayout.swift
+//  AnimatedAnimals
+//
+//  Created by Rost on 23.12.2019.
+//  Copyright © 2019 Rost Gress. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+
+extension AnimalsContainerView: UICollectionViewDelegateFlowLayout {
+
+    /// ---> Fucntion of collection view delegate flow layout protocol <--- ///
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (UIScreen.main.bounds.width / 2.0) - 30.0
+        let height = self.bounds.size.height - 35.0
+        return CGSize(width: width, height: height)
+    }
+    
+    
+    /// ---> Fucntion of collection view delegate flow layout protocol <--- ///
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return cellMargin
+    }
+
+    
+    /// ---> Fucntion of collection view delegate flow layout protocol <--- ///
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return cellMargin * 2
+    }
+
+    
+    /// ---> Fucntion of collection view delegate flow layout protocol <--- ///
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.init(top: cellMargin, left: cellMargin, bottom: cellMargin, right: cellMargin)
+    }
+}

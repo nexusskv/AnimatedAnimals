@@ -12,4 +12,5 @@ import UIKit
 
 class SecondTableCell: UITableViewCell {
     @IBOutlet weak var likesTable: UITableView!
+    var likesArray: [[AnimalObject]] = []
 }

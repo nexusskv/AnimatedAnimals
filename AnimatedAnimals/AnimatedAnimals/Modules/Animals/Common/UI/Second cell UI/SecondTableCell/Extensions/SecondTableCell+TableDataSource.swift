@@ -1,5 +1,5 @@
 //
-//  AnimalsViewController+TableDataSource.swift
+//  SecondTableCell+TableDataSource.swift
 //  AnimatedAnimals
 //
 //  Created by Rost on 23.12.2019.
@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-extension AnimalsViewController: UITableViewDataSource, UITableViewDelegate {
+extension SecondTableCell: UITableViewDataSource, UITableViewDelegate {
             
     /// ---> Table view data source and delegate functions <--- ///
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -20,12 +20,16 @@ extension AnimalsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return likesArray.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let height = makeHeight(indexPath.row)
+        return 79.0
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
-        return height
+        presentDetails(indexPath)
     }
 }

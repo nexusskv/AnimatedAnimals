@@ -13,4 +13,20 @@ import UIKit
 class AnimalsViewCell: UICollectionViewCell {
     @IBOutlet weak var iconImage: AsyncImageView!
     @IBOutlet weak var animalTitle: UILabel!
+    @IBOutlet weak var animalButton: UIButton!
+    @IBOutlet weak var stampImage: UIImageView!
+    
+    /// ---> View life cycle <--- ///
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        setupUI()
+    }
+    
+    
+    /// ---> Function set cell by fixed size <--- ///
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes)
+        -> UICollectionViewLayoutAttributes {
+      return layoutAttributes
+    }
 }

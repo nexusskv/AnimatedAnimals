@@ -12,17 +12,16 @@ import UIKit
 
 class AnimalsViewController: UIViewController {
     @IBOutlet weak var dataTable: UITableView!
-    
+    var dataArray: [[AnimalObject]] = []  // data array for first cell
+
     
     /// ---> View life cycle <--- ///
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        makeDataSource()
         
         setupUI()
-    }
-    
-    deinit {
-        
     }
 }
 

@@ -11,5 +11,6 @@ import UIKit
 
 
 class FirstTableCell: UITableViewCell {
-    @IBOutlet weak var animalsView: UICollectionView!
+    @IBOutlet weak var containerView: AnimalsContainerView!
+
 }
