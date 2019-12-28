@@ -25,8 +25,7 @@ class AnimalsViewCell: UICollectionViewCell {
     
     
     /// ---> Function set cell by fixed size <--- ///
-    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes)
-        -> UICollectionViewLayoutAttributes {
-      return layoutAttributes
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        return layoutAttributes
     }
 }

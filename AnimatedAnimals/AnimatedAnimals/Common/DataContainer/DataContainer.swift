@@ -17,7 +17,6 @@ final class DataContainer {
     var allAnimals: [AnimalObject]?
     var selectedDetailType: AnimalsTypes = .none
     
-    
     func makeAnimals() {
         let dataArrays = [testCats,
                           testDogs,

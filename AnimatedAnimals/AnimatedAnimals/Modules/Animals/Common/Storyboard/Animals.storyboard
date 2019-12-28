@@ -153,15 +153,6 @@
                                             <outlet property="containerView" destination="Iyn-12-rse" id="AU0-Wg-zR2"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SecondTableCell" rowHeight="454" id="G2i-iG-R3F" customClass="SecondTableCell" customModule="AnimatedAnimals" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="398" width="414" height="454"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G2i-iG-R3F" id="cKT-kD-wPc">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="454"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.85410387190000003" blue="0.5208990241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="a5A-Jm-Sbv"/>
