@@ -12,8 +12,10 @@ import UIKit
 
 class AnimalsContainerView: UIView {
     @IBOutlet weak var animalsView: UICollectionView!
+    var animalsLayout: UICollectionViewFlowLayout!
     var animalsArray: [[AnimalObject]] = []
     var cellMargin: CGFloat!
+    var indexOfCellBeforeDragging = 0
     
     /// ---> View life cycle <--- ///
     override func awakeFromNib() {

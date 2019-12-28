@@ -23,6 +23,5 @@ extension AnimalsContainerView: UICollectionViewDataSource {
         let cell = makeCell(collectionView, at: indexPath)
         
         return cell
-    }
-    
+    }    
 }

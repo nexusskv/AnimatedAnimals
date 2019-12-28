@@ -24,12 +24,7 @@ extension AnimalsViewCell {
     }
     
     func setValues(_ object: AnimalObject, at index: Int) {
-        let holderImage = UIImage(named: "animal_holder")
-        if !object.url.isEmpty {
-            iconImage.loadAsync(object.url, placeholder: holderImage)
-        } else {
-            iconImage.image = holderImage
-        }
+        iconImage.setUrl(object.url)
         
         animalTitle.text = object.name
         
@@ -46,5 +41,17 @@ extension AnimalsViewCell {
         stampImage.layer.masksToBounds = false
         
         animalButton.tag = index
+    }
+    
+    func isHightlightTapped(_ flag: Bool) {
+        if flag {
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+                self.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+            }, completion: nil)
+        } else {
+            UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
+                self.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }, completion: nil)
+        }
     }
 }

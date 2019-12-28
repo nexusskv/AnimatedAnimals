@@ -13,7 +13,17 @@ import UIKit
 extension AnimalsContainerView {
     
     func setupUI() {
-        cellMargin = 10.0
+        cellMargin      = 10.0
+
+        animalsView.tag = topCollectionTag
+        
+        configCollectionLayout()
+    }
+    
+    func setDataSource(_ objects: [[AnimalObject]]) {
+        animalsArray = objects
+        
+        configCollectionLayout()
     }
     
     /// ---> Function for make custom cells based on index of row  <--- ///
