@@ -12,9 +12,13 @@ import UIKit
 
 extension AnimalsViewController {
     
-    func setupUI() {
-        let bottomInset = UIScreen.main.bounds.height / 2.8
+    func setupUI() {        
         dataTable.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: bottomInset, right: 0.0)
+        
+        dataTable.tag = topTableTag
+        
+        dataTable.sectionHeaderHeight = makeHeight(0)
+        dataTable.sectionFooterHeight = makeHeight(1)
     }
     
     func makeDataSource() {
@@ -29,31 +33,39 @@ extension AnimalsViewController {
                 dataArray.append(animals)
             }
         }
-        
-        dataTable.reloadData()
+
+        dataTable.reloadData()        
     }
     
-    func makeCell(_ table: UITableView, at index: IndexPath) -> UITableViewCell {
-        switch index.row {
+    func makeView(_ table: UITableView, at index: Int) -> UIView {
+        let customView = UIView()
+        let bgRect = CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.size.width, height: makeHeight(index))
+        customView.frame = bgRect
+        
+        switch index {
             case 0:
-                let cell = table.dequeueReusableCell(withIdentifier: "FirstTableCell",
-                                                     for: index) as? FirstTableCell
-                                
-                cell?.setValues(dataArray)
+                let header = table.dequeueReusableCell(withIdentifier: "FirstTableCell") as! FirstTableCell
+                header.frame = bgRect
+                header.setValues(dataArray)
                 
-                return cell ?? FirstTableCell()
+                customView.addSubview(header)
+                return customView
             case 1:
-                let cell = table.dequeueReusableCell(withIdentifier: "SecondTableCell",
-                                                     for: index) as? SecondTableCell
-                                
-                cell?.setValues(dataArray)
+                likesView = LikesView()
+                likesView.frame = bgRect
+                likesView.backgroundColor = .green
+
+                customView.addSubview(likesView)
                 
-                return cell ?? SecondTableCell()
+                likesView.setValues(dataArray, at: selectedAnimal)
+                likesView.likesTable.frame = bgRect
+                
+                return customView
             default:
                 break
         }
         
-        return UITableViewCell()
+        return UIView()
     }
     
     func makeHeight(_ index: Int) -> CGFloat {
@@ -61,8 +73,13 @@ extension AnimalsViewController {
         switch index {
             case 0:
                 height = UIScreen.main.bounds.height / 2.6
+            
             case 1:
-                height = UIScreen.main.bounds.height / 2
+                height = UIScreen.main.bounds.height / 2.0
+            
+            case 2:
+                height = UIScreen.main.bounds.height - (UIScreen.main.bounds.height / 6.8)
+
             default:
                 break
         }

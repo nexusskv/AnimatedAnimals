@@ -13,8 +13,6 @@ import UIKit
 extension FirstTableCell {
     
     func setValues(_ objects: [[AnimalObject]]) {
-        containerView.animalsArray = objects
-        
-        containerView.animalsView.reloadData()
+        containerView.setDataSource(objects)
     }
 }
