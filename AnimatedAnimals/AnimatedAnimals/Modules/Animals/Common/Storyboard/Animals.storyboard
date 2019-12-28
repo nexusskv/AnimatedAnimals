@@ -18,7 +18,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aV8-gi-ELf">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FirstTableCell" rowHeight="370" id="ik9-SO-Xr8" customClass="FirstTableCell" customModule="AnimatedAnimals" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="370"/>
@@ -87,6 +87,9 @@
                                                                             </imageView>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bg1-p2-kDK">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="208" height="284"/>
+                                                                                <connections>
+                                                                                    <action selector="animalItemButtonTapped:" destination="VCK-FJ-fww" eventType="touchUpInside" id="Fby-5P-Wny"/>
+                                                                                </connections>
                                                                             </button>
                                                                         </subviews>
                                                                         <constraints>
@@ -145,6 +148,7 @@
                                                 <constraint firstItem="Iyn-12-rse" firstAttribute="leading" secondItem="Dr2-2t-CPl" secondAttribute="leading" id="pUq-xr-O1M"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="containerView" destination="Iyn-12-rse" id="AU0-Wg-zR2"/>
                                         </connections>
@@ -155,90 +159,8 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G2i-iG-R3F" id="cKT-kD-wPc">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="454"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nts-qp-034">
-                                                    <rect key="frame" x="0.0" y="5" width="414" height="444"/>
-                                                    <subviews>
-                                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Xt-kg-yxp">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="444"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                            <prototypes>
-                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LikesCell" rowHeight="95" id="Eyc-C9-VuL" customClass="LikesCell" customModule="AnimatedAnimals" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="28" width="414" height="95"/>
-                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Eyc-C9-VuL" id="moo-pW-agP">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
-                                                                        <autoresizingMask key="autoresizingMask"/>
-                                                                        <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dW9-aj-qVi" customClass="AsyncImageView" customModule="AnimatedAnimals" customModuleProvider="target">
-                                                                                <rect key="frame" x="20" y="12.5" width="70" height="70"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="width" constant="70" id="cz4-Xh-q0Y"/>
-                                                                                    <constraint firstAttribute="height" constant="70" id="lc0-z4-F7S"/>
-                                                                                </constraints>
-                                                                            </imageView>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neL-K1-t2T">
-                                                                                <rect key="frame" x="110" y="13" width="284" height="36"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="36" id="Uij-Bd-gmC"/>
-                                                                                </constraints>
-                                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                                                <nil key="textColor"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgU-BH-p0d">
-                                                                                <rect key="frame" x="110" y="56" width="284" height="20"/>
-                                                                                <constraints>
-                                                                                    <constraint firstAttribute="height" constant="20" id="Qv4-Cs-XB9"/>
-                                                                                </constraints>
-                                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <nil key="highlightedColor"/>
-                                                                            </label>
-                                                                        </subviews>
-                                                                        <constraints>
-                                                                            <constraint firstItem="TgU-BH-p0d" firstAttribute="top" secondItem="neL-K1-t2T" secondAttribute="bottom" constant="7" id="2uV-AO-KYe"/>
-                                                                            <constraint firstItem="TgU-BH-p0d" firstAttribute="leading" secondItem="dW9-aj-qVi" secondAttribute="trailing" constant="20" id="4TQ-1N-Y8Q"/>
-                                                                            <constraint firstItem="dW9-aj-qVi" firstAttribute="leading" secondItem="moo-pW-agP" secondAttribute="leadingMargin" id="6hr-Hg-7LG"/>
-                                                                            <constraint firstItem="neL-K1-t2T" firstAttribute="leading" secondItem="dW9-aj-qVi" secondAttribute="trailing" constant="20" id="NZT-tb-4gh"/>
-                                                                            <constraint firstItem="dW9-aj-qVi" firstAttribute="centerY" secondItem="moo-pW-agP" secondAttribute="centerY" id="WAo-hh-Vss"/>
-                                                                            <constraint firstItem="neL-K1-t2T" firstAttribute="trailing" secondItem="moo-pW-agP" secondAttribute="trailingMargin" id="ZE9-ru-gSw"/>
-                                                                            <constraint firstItem="neL-K1-t2T" firstAttribute="top" secondItem="moo-pW-agP" secondAttribute="topMargin" constant="2" id="fKP-wa-Q9J"/>
-                                                                            <constraint firstItem="TgU-BH-p0d" firstAttribute="trailing" secondItem="moo-pW-agP" secondAttribute="trailingMargin" id="hYS-51-Jy6"/>
-                                                                        </constraints>
-                                                                    </tableViewCellContentView>
-                                                                    <connections>
-                                                                        <outlet property="animalTitle" destination="neL-K1-t2T" id="Zsj-oK-Zhw"/>
-                                                                        <outlet property="iconImage" destination="dW9-aj-qVi" id="keo-ST-J36"/>
-                                                                        <outlet property="likesNumber" destination="TgU-BH-p0d" id="9Oy-Nq-1nf"/>
-                                                                    </connections>
-                                                                </tableViewCell>
-                                                            </prototypes>
-                                                            <connections>
-                                                                <outlet property="dataSource" destination="G2i-iG-R3F" id="JSV-iD-bAo"/>
-                                                                <outlet property="delegate" destination="G2i-iG-R3F" id="ThW-gd-ZDc"/>
-                                                            </connections>
-                                                        </tableView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="8Xt-kg-yxp" secondAttribute="bottom" id="02q-jV-QW6"/>
-                                                        <constraint firstItem="8Xt-kg-yxp" firstAttribute="top" secondItem="nts-qp-034" secondAttribute="top" id="FYw-ao-BpG"/>
-                                                        <constraint firstItem="8Xt-kg-yxp" firstAttribute="leading" secondItem="nts-qp-034" secondAttribute="leading" id="tSA-k9-zbE"/>
-                                                        <constraint firstAttribute="trailing" secondItem="8Xt-kg-yxp" secondAttribute="trailing" id="xm2-hZ-Bh8"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="nts-qp-034" firstAttribute="top" secondItem="cKT-kD-wPc" secondAttribute="top" constant="5" id="4nO-Uv-nzV"/>
-                                                <constraint firstAttribute="trailing" secondItem="nts-qp-034" secondAttribute="trailing" id="NWq-qd-TYP"/>
-                                                <constraint firstItem="nts-qp-034" firstAttribute="leading" secondItem="cKT-kD-wPc" secondAttribute="leading" id="Ugg-ur-HZu"/>
-                                                <constraint firstAttribute="bottom" secondItem="nts-qp-034" secondAttribute="bottom" constant="5" id="w7B-ES-Nni"/>
-                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="likesTable" destination="8Xt-kg-yxp" id="ZGw-RJ-Df8"/>
-                                        </connections>
+                                        <color key="backgroundColor" red="1" green="0.85410387190000003" blue="0.5208990241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

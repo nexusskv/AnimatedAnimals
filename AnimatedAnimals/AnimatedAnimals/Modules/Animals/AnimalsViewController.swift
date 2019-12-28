@@ -12,16 +12,27 @@ import UIKit
 
 class AnimalsViewController: UIViewController {
     @IBOutlet weak var dataTable: UITableView!
+    
     var dataArray: [[AnimalObject]] = []  // data array for first cell
-
+    var selectedAnimal: Int = 0
+    let bottomInset = UIScreen.main.bounds.height / 2.8
+    var bottomView: UIView!
+    var likesView: LikesView!
+    
     
     /// ---> View life cycle <--- ///
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        addObservers()
+        
         makeDataSource()
         
         setupUI()
+    }
+    
+    deinit {
+        removeObservers()
     }
 }
 
