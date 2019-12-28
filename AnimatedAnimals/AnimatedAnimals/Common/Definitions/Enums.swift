@@ -15,8 +15,16 @@ enum AnimalsTypes: Int {
     case dog
     case parrot
     case fox
+    case squirrel
+    case lion
+    case tiger
     
     static func getAllTypes() -> [AnimalsTypes] {
-        return [.cat, .dog, .parrot, .fox]
+        return [.cat, .dog, .parrot, .fox, .squirrel, .lion, .tiger]
     }
+}
+
+enum TransitionType: Int {
+    case push
+    case pop
 }

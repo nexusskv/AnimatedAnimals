@@ -15,12 +15,17 @@ final class DataContainer {
     static let shared = DataContainer()
     
     var allAnimals: [AnimalObject]?
+    var selectedDetailType: AnimalsTypes = .none
+    
     
     func makeAnimals() {
         let dataArrays = [testCats,
                           testDogs,
                           testParrots,
-                          testFoxes]
+                          testFoxes,
+                          testSquirrel,
+                          testLions,
+                          testTigers]
         
         var typeCount = 0
         
