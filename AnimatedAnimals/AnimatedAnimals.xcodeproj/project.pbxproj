@@ -22,6 +22,9 @@
 		115DF03723B0ED7F0025FDD0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DF03623B0ED7F0025FDD0 /* Enums.swift */; };
 		115DF03B23B100C80025FDD0 /* FirstTableCell+Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DF03A23B100C80025FDD0 /* FirstTableCell+Setter.swift */; };
 		115DF03E23B108DE0025FDD0 /* AnimalsViewCell+Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DF03D23B108DE0025FDD0 /* AnimalsViewCell+Setter.swift */; };
+		117F4AF623B8D707003248C7 /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F4AF523B8D707003248C7 /* UIView+Anchors.swift */; };
+		117F4B0023B97737003248C7 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F4AFF23B97737003248C7 /* RequestBuilder.swift */; };
+		117F4B0223B97BC4003248C7 /* DetailsViewController+NavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F4B0123B97BC4003248C7 /* DetailsViewController+NavigationDelegate.swift */; };
 		11866AE323B646370090424B /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11866AE223B646370090424B /* DetailsViewController.swift */; };
 		11866AE823B646750090424B /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11866AE723B646750090424B /* Details.storyboard */; };
 		1195B68523AFF9FD00E5285F /* AnimatedAnimalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195B68423AFF9FD00E5285F /* AnimatedAnimalsTests.swift */; };
@@ -76,6 +79,9 @@
 		115DF03623B0ED7F0025FDD0 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		115DF03A23B100C80025FDD0 /* FirstTableCell+Setter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirstTableCell+Setter.swift"; sourceTree = "<group>"; };
 		115DF03D23B108DE0025FDD0 /* AnimalsViewCell+Setter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalsViewCell+Setter.swift"; sourceTree = "<group>"; };
+		117F4AF523B8D707003248C7 /* UIView+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
+		117F4AFF23B97737003248C7 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		117F4B0123B97BC4003248C7 /* DetailsViewController+NavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailsViewController+NavigationDelegate.swift"; sourceTree = "<group>"; };
 		11866AE223B646370090424B /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		11866AE723B646750090424B /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
 		1195B66A23AFF9F800E5285F /* AnimatedAnimals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimatedAnimals.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +183,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		117F4AFE23B97711003248C7 /* RequestBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				117F4AFF23B97737003248C7 /* RequestBuilder.swift */,
+			);
+			path = RequestBuilder;
+			sourceTree = "<group>";
+		};
 		11866AE123B645F30090424B /* Animal details */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +206,7 @@
 			children = (
 				115C438323B7D15E003F2D8A /* DetailsViewController+Actions.swift */,
 				115C438523B7D1DC003F2D8A /* DetailsViewController+Functions.swift */,
+				117F4B0123B97BC4003248C7 /* DetailsViewController+NavigationDelegate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -282,6 +297,7 @@
 		1195B69423B01AD000E5285F /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
+				117F4AFE23B97711003248C7 /* RequestBuilder */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -457,6 +473,7 @@
 			isa = PBXGroup;
 			children = (
 				11F27ED823B18451001416B9 /* UIView+Corners.swift */,
+				117F4AF523B8D707003248C7 /* UIView+Anchors.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -601,8 +618,10 @@
 				11F27EE223B1970D001416B9 /* AnimalsContainerView+Functions.swift in Sources */,
 				11F27EE323B1970D001416B9 /* AnimalsContainerView+CollectionDelegate.swift in Sources */,
 				11B4AC2523B5716200B71A93 /* LikesView+Functions.swift in Sources */,
+				117F4AF623B8D707003248C7 /* UIView+Anchors.swift in Sources */,
 				115DF03523B0E8BF0025FDD0 /* AnimalObject.swift in Sources */,
 				11B4AC2323B570BF00B71A93 /* LikesView+Setter.swift in Sources */,
+				117F4B0223B97BC4003248C7 /* DetailsViewController+NavigationDelegate.swift in Sources */,
 				11182E4B23B2D8FF009B9F6C /* AsyncImageView+Setter.swift in Sources */,
 				11F27EDC23B1959F001416B9 /* AnimalsContainerView.swift in Sources */,
 				1195B6B723B02AFD00E5285F /* AnimalsViewController+Functions.swift in Sources */,
@@ -617,6 +636,7 @@
 				1195B69D23B01BB800E5285F /* Constants.swift in Sources */,
 				115DF03723B0ED7F0025FDD0 /* Enums.swift in Sources */,
 				11F27ED923B18451001416B9 /* UIView+Corners.swift in Sources */,
+				117F4B0023B97737003248C7 /* RequestBuilder.swift in Sources */,
 				1195B6CC23B033A600E5285F /* LikesCell.swift in Sources */,
 				115C438223B7C3AA003F2D8A /* Router+Transition.swift in Sources */,
 			);

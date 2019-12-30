@@ -10,7 +10,7 @@
         <!--Details View Controller-->
         <scene sceneID="txU-i6-Wjs">
             <objects>
-                <viewController id="LUr-eX-Yiw" customClass="DetailsViewController" customModule="AnimatedAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsViewController" id="LUr-eX-Yiw" customClass="DetailsViewController" customModule="AnimatedAnimals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ew7-PR-FKf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,29 +82,51 @@
                                     <constraint firstAttribute="trailing" secondItem="8Vc-Fe-362" secondAttribute="trailing" constant="5" id="vjV-wB-QB6"/>
                                 </constraints>
                             </view>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DBE-9M-b6x">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aer-sN-qnK">
                                 <rect key="frame" x="0.0" y="212" width="414" height="650"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                                <subviews>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DBE-9M-b6x">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="650"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Xgz-l4-gqs">
+                                        <rect key="frame" x="187" y="305" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="NRg-zH-xfX"/>
+                                            <constraint firstAttribute="width" constant="40" id="n4I-gI-Wxj"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Xgz-l4-gqs" firstAttribute="centerX" secondItem="Aer-sN-qnK" secondAttribute="centerX" id="1RI-3T-in2"/>
+                                    <constraint firstAttribute="bottom" secondItem="DBE-9M-b6x" secondAttribute="bottom" id="Qpv-ZQ-LfG"/>
+                                    <constraint firstAttribute="trailing" secondItem="DBE-9M-b6x" secondAttribute="trailing" id="gAA-Kx-Q1r"/>
+                                    <constraint firstItem="DBE-9M-b6x" firstAttribute="top" secondItem="Aer-sN-qnK" secondAttribute="top" id="nDA-r2-U8s"/>
+                                    <constraint firstItem="Xgz-l4-gqs" firstAttribute="centerY" secondItem="Aer-sN-qnK" secondAttribute="centerY" id="s2P-9h-ByC"/>
+                                    <constraint firstItem="DBE-9M-b6x" firstAttribute="leading" secondItem="Aer-sN-qnK" secondAttribute="leading" id="sKk-vH-lmg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="g3f-GY-Cfl" firstAttribute="top" secondItem="KL2-Au-Bou" secondAttribute="top" id="0YP-Nz-onC"/>
+                            <constraint firstItem="Aer-sN-qnK" firstAttribute="leading" secondItem="KL2-Au-Bou" secondAttribute="leading" id="2Nc-JD-MKW"/>
                             <constraint firstItem="g3f-GY-Cfl" firstAttribute="trailing" secondItem="KL2-Au-Bou" secondAttribute="trailing" id="8Hl-VY-GfZ"/>
                             <constraint firstItem="g3f-GY-Cfl" firstAttribute="leading" secondItem="KL2-Au-Bou" secondAttribute="leading" id="Keh-iO-ptD"/>
-                            <constraint firstItem="DBE-9M-b6x" firstAttribute="bottom" secondItem="KL2-Au-Bou" secondAttribute="bottom" id="O2E-3n-WYI"/>
-                            <constraint firstItem="DBE-9M-b6x" firstAttribute="trailing" secondItem="KL2-Au-Bou" secondAttribute="trailing" id="do5-gG-gvh"/>
-                            <constraint firstItem="DBE-9M-b6x" firstAttribute="top" secondItem="g3f-GY-Cfl" secondAttribute="bottom" constant="8" symbolic="YES" id="fj5-nA-7Pj"/>
-                            <constraint firstItem="DBE-9M-b6x" firstAttribute="leading" secondItem="KL2-Au-Bou" secondAttribute="leading" id="q8S-Aq-bXu"/>
+                            <constraint firstItem="Aer-sN-qnK" firstAttribute="trailing" secondItem="KL2-Au-Bou" secondAttribute="trailing" id="UNe-lP-Ejm"/>
+                            <constraint firstItem="Aer-sN-qnK" firstAttribute="top" secondItem="g3f-GY-Cfl" secondAttribute="bottom" constant="8" symbolic="YES" id="XcJ-aW-0fo"/>
+                            <constraint firstItem="Aer-sN-qnK" firstAttribute="bottom" secondItem="KL2-Au-Bou" secondAttribute="bottom" id="fp0-lP-ysu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KL2-Au-Bou"/>
                     </view>
                     <connections>
                         <outlet property="aboutWebView" destination="DBE-9M-b6x" id="ZZO-qU-CdH"/>
+                        <outlet property="activityIndicator" destination="Xgz-l4-gqs" id="sya-F9-6zE"/>
                         <outlet property="animalImage" destination="Zc2-15-dJA" id="nl9-7N-eM7"/>
                         <outlet property="animalTitle" destination="8Vc-Fe-362" id="kQD-v7-Qf4"/>
                         <outlet property="totalLikes" destination="GK8-dZ-NqF" id="8Kx-CA-BAB"/>
