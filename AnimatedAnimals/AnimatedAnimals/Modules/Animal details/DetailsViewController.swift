@@ -16,11 +16,18 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var animalTitle: UILabel!
     @IBOutlet weak var totalLikes: UILabel!
     @IBOutlet weak var aboutWebView: WKWebView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     /// ---> View life cycle <--- ///
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        loadContent()
     }
 }

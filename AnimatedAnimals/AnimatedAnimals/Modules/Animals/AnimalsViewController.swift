@@ -19,7 +19,6 @@ class AnimalsViewController: UIViewController {
     var bottomView: UIView!
     var likesView: LikesView!
     
-    
     /// ---> View life cycle <--- ///
     override func viewDidLoad() {
         super.viewDidLoad()

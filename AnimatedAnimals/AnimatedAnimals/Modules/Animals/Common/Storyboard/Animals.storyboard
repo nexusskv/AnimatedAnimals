@@ -11,7 +11,7 @@
         <!--Animals View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AnimalsViewController" customModule="AnimatedAnimals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnimalsViewController" id="BYZ-38-t0r" customClass="AnimalsViewController" customModule="AnimatedAnimals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,7 +69,7 @@
                                                                                 <rect key="frame" x="0.0" y="0.0" width="208" height="284"/>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Izg-hB-Df1">
-                                                                                <rect key="frame" x="34" y="246" width="159" height="21"/>
+                                                                                <rect key="frame" x="34" y="245" width="159" height="21"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="21" id="NQL-H2-BNT"/>
                                                                                 </constraints>
@@ -81,8 +81,8 @@
                                                                                 <rect key="frame" x="6" y="245" width="20" height="21"/>
                                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="width" constant="20" id="IYM-nd-FJs"/>
-                                                                                    <constraint firstAttribute="height" constant="20" id="p0E-8R-RC3"/>
+                                                                                    <constraint firstAttribute="height" constant="20" id="H6M-oJ-2D5"/>
+                                                                                    <constraint firstAttribute="width" constant="20" id="ogh-GQ-j9m"/>
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bg1-p2-kDK">
@@ -96,13 +96,14 @@
                                                                             <constraint firstItem="bg1-p2-kDK" firstAttribute="leading" secondItem="Xnq-bG-tZh" secondAttribute="leading" id="0pn-7h-yaN"/>
                                                                             <constraint firstAttribute="trailing" secondItem="bg1-p2-kDK" secondAttribute="trailing" id="4AU-cK-HrI"/>
                                                                             <constraint firstItem="11c-xb-muF" firstAttribute="top" secondItem="Xnq-bG-tZh" secondAttribute="top" id="6h8-4W-6ON"/>
-                                                                            <constraint firstItem="Izg-hB-Df1" firstAttribute="leading" secondItem="WeU-Ab-8zl" secondAttribute="trailing" constant="8" id="9NR-lH-jT7"/>
                                                                             <constraint firstAttribute="trailing" secondItem="11c-xb-muF" secondAttribute="trailing" id="B2H-SF-ojJ"/>
-                                                                            <constraint firstItem="WeU-Ab-8zl" firstAttribute="leading" secondItem="Xnq-bG-tZh" secondAttribute="leading" constant="6" id="Gcs-ZN-rc1"/>
                                                                             <constraint firstItem="11c-xb-muF" firstAttribute="leading" secondItem="Xnq-bG-tZh" secondAttribute="leading" id="Hat-aE-lS7"/>
                                                                             <constraint firstAttribute="bottom" secondItem="11c-xb-muF" secondAttribute="bottom" id="P2u-JA-pSF"/>
-                                                                            <constraint firstAttribute="bottom" secondItem="WeU-Ab-8zl" secondAttribute="bottom" constant="18" id="P3J-Q6-Qok"/>
-                                                                            <constraint firstAttribute="bottom" secondItem="Izg-hB-Df1" secondAttribute="bottom" constant="17" id="XrT-7b-oYz"/>
+                                                                            <constraint firstItem="Izg-hB-Df1" firstAttribute="leading" secondItem="WeU-Ab-8zl" secondAttribute="trailing" constant="8" id="cIi-ik-skg"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="Izg-hB-Df1" secondAttribute="trailing" constant="15" id="drw-O2-uYp"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="WeU-Ab-8zl" secondAttribute="bottom" constant="18" id="fZx-AF-lhq"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="Izg-hB-Df1" secondAttribute="bottom" constant="18" id="ggG-eZ-ybK"/>
+                                                                            <constraint firstItem="WeU-Ab-8zl" firstAttribute="leading" secondItem="Xnq-bG-tZh" secondAttribute="leading" constant="6" id="i9P-5e-i50"/>
                                                                             <constraint firstAttribute="trailing" secondItem="Izg-hB-Df1" secondAttribute="trailing" constant="15" id="o3p-qD-jLb"/>
                                                                             <constraint firstAttribute="bottom" secondItem="bg1-p2-kDK" secondAttribute="bottom" id="qCx-Ke-zv4"/>
                                                                             <constraint firstItem="bg1-p2-kDK" firstAttribute="top" secondItem="Xnq-bG-tZh" secondAttribute="top" id="qwl-XD-xb0"/>
