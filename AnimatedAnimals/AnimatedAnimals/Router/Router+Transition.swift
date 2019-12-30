@@ -15,15 +15,14 @@ extension Router {
     /// ---> Function for make custom transition same as push/pop <--- ///
     static func makeTransition(_ type: TransitionType) -> CATransition {
         let transition              = CATransition()
-        transition.duration         = 0.25
-        transition.type             = .push
-        transition.timingFunction   = CAMediaTimingFunction(name: .easeIn)
-        
+        transition.duration         = 0.5
+        transition.type             = .reveal
+        transition.subtype          = .fromTop
         switch type {
             case .push:
-                transition.subtype  = .fromBottom
+                transition.timingFunction   = CAMediaTimingFunction(name: .default)
             case .pop:
-                transition.subtype  = .fromTop
+                transition.timingFunction   = CAMediaTimingFunction(name: .easeInEaseOut)
         }
         
         return transition

@@ -11,7 +11,7 @@ import UIKit
 
 
 class Router {
-
+        
     /// ---> Function for show some view controller from other view controller <--- ///
     static func present(_ vc: String, from parent: UIViewController) {
         let storyboard = UIStoryboard(name: vc, bundle: nil)
@@ -19,9 +19,10 @@ class Router {
         child.modalPresentationStyle = .fullScreen
         
         let transition = makeTransition(.push)
+
         parent.view.window!.layer.add(transition, forKey: kCATransition)
-        
         parent.present(child, animated: false, completion: nil)
+
     }
     
     
@@ -31,5 +32,5 @@ class Router {
         vc.view.window!.layer.add(transition, forKey: kCATransition)
         
         vc.dismiss(animated: false, completion: nil)
-    }
+    }    
 }

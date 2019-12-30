@@ -37,7 +37,7 @@ extension AnimalsViewController {
             if let index = info["index"] as? Int {
                 selectedAnimal = index
 
-             // bottomView.setValues(dataArray, at: selectedAnimal)
+                likesView.setValues(dataArray, at: selectedAnimal)
             }
         }
     }

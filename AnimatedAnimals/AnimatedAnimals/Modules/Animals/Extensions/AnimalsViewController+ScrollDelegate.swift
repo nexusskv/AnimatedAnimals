@@ -21,22 +21,25 @@ extension AnimalsViewController: UIScrollViewDelegate {
                 UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
                     let height = self.makeHeight(2)
                     
+                    self.dataTable.sectionFooterHeight = height
+                    
                     var rect = self.likesView.frame
                     rect.size.height = height
                     self.likesView.frame = rect
                     self.likesView.likesTable.frame = rect
-                    
-                    self.dataTable.sectionFooterHeight = height
+
                 })
             } else if scrollView.contentOffset.y == 0.0 {
                 UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
                     let height = self.makeHeight(1)
-                    var rect = self.likesView.frame
-                    rect.size.height = height
-                    self.likesView.frame = rect
-                    self.likesView.likesTable.frame = rect
                     
                     self.dataTable.sectionFooterHeight = height
+                    
+                    var rect = self.likesView.frame
+                    rect.size.height = height
+
+                    self.likesView.frame = rect
+                    self.likesView.likesTable.frame = rect
                 })
             }
         }
