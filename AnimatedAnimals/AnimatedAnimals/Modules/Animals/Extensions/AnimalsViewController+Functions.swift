@@ -22,20 +22,48 @@ extension AnimalsViewController {
     }
     
     func makeDataSource() {
-        DataContainer.shared.makeAnimals()
-        
-        if let all = DataContainer.shared.allAnimals {
-            let animalsTypes = AnimalsTypes.getAllTypes()
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            guard let strongSelf = self else {
+                return
+            }
             
-            for type in animalsTypes {
-                let animals = all.filter { $0.type == type }
-                
-                dataArray.append(animals)
+            DataContainer.shared.makeAnimals()
+            
+            DispatchQueue.global(qos: .userInitiated).async {                
+                if let all = DataContainer.shared.allAnimals {
+                    let animalsTypes = AnimalsTypes.getAllTypes()
+                    
+                    for type in animalsTypes {
+                        let animals = all.filter { $0.type == type }
+                        
+                        strongSelf.dataArray.append(animals)
+                    }
+                }
+                                
+                DispatchQueue.main.async {
+                    strongSelf.refreshDataTable()
+                }
             }
         }
-
-        dataTable.reloadData()        
     }
+    
+    func refreshDataTable() {
+        dataTable.reloadData()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            guard let strongSelf = self else {
+                return
+            }
+            
+            strongSelf.refreshLikesTable()
+        }
+    }
+    
+    
+    func refreshLikesTable() {
+        likesView.setValues(dataArray, at: selectedAnimal)
+    }
+    
     
     func makeView(_ table: UITableView, at index: Int) -> UIView {
         let customView = UIView()
@@ -56,10 +84,9 @@ extension AnimalsViewController {
                 likesView.backgroundColor = .green
 
                 customView.addSubview(likesView)
-                
-                likesView.setValues(dataArray, at: selectedAnimal)
+                                
                 likesView.likesTable.frame = bgRect
-                
+                                
                 return customView
             default:
                 break

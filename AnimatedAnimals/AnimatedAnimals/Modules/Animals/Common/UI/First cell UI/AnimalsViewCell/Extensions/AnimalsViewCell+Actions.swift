@@ -22,7 +22,10 @@ extension AnimalsViewCell {
                 DataContainer.shared.selectedDetailType = type
             }
             
-            NotificationCenter.default.post(name: showDetailsName, object: nil)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                NotificationCenter.default.post(name: showDetailsName,
+                                                object: nil)
+            }
         }        
     }
 }
