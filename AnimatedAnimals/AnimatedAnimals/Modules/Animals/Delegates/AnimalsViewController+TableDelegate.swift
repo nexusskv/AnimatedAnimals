@@ -20,14 +20,13 @@ extension AnimalsViewController: UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = makeView(tableView, at: 0)
-        
+        let header = UIMaker.makeAnimalsCellViews(tableView, array: dataArray, at: 0)
         return header
     }
     
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footer = makeView(tableView, at: 1)
+        let footer = UIMaker.makeAnimalsCellViews(tableView, array: dataArray, at: 1)
         
         return footer
     }

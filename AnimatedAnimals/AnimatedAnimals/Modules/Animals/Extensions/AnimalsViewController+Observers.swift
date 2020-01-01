@@ -24,26 +24,15 @@ extension AnimalsViewController {
                                   selector: #selector(showDetails),
                                   name: showDetailsName,
                                   object: nil)
+        
+        defaultCenter.addObserver(self,
+                                  selector: #selector(showLikeDetails),
+                                  name: showLikeDetailsName,
+                                  object: nil)
     }
     
     
     func removeObservers() {
         NotificationCenter.default.removeObserver(self)
-    }
-    
-    
-    @objc func reloadLikedList(_ sender: NSNotification) {
-        if let info = sender.userInfo {
-            if let index = info["index"] as? Int {
-                selectedAnimal = index
-
-                likesView.setValues(dataArray, at: selectedAnimal)
-            }
-        }
-    }
-    
-    
-    @objc func showDetails(_ sender: NSNotification) {
-        Router.present("Details", from: self)
     }
 }

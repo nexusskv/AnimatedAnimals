@@ -1,5 +1,5 @@
 //
-//  FirstTableCell+Setter.swift
+//  TopTableCell+Setter.swift
 //  AnimatedAnimals
 //
 //  Created by Rost on 23.12.2019.
@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 
 
-extension FirstTableCell {
+extension TopTableCell {
     
+    /// ---> Function for set values to UI  <--- ///
     func setValues(_ objects: [[AnimalObject]]) {
         containerView.setDataSource(objects)
     }
