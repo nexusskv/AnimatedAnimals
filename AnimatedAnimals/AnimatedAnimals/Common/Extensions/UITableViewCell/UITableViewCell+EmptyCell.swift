@@ -12,6 +12,7 @@ import UIKit
 
 extension UITableViewCell {
     
+    /// ---> Function for make empty cell <--- ///
     static func makeEmptyCell() -> UITableViewCell {
         let cell = UITableViewCell()
         

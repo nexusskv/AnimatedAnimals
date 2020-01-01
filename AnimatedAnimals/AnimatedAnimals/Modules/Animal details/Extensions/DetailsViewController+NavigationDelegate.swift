@@ -12,7 +12,7 @@ import WebKit
 
 extension DetailsViewController: WKNavigationDelegate {
     
-    /// ---> Function of navigation delegate protocol <--- ///
+    /// ---> Function from navigation delegate protocol <--- ///
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         activityIndicator.stopAnimating()
     }

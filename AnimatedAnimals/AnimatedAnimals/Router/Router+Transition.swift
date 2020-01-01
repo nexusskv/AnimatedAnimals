@@ -12,7 +12,7 @@ import UIKit
 
 extension Router {
     
-    /// ---> Function for make custom transition same as push/pop <--- ///
+    /// ---> Function for make custom transition <--- ///
     static func makeTransition(_ type: TransitionType) -> CATransition {
         let transition              = CATransition()
         transition.duration         = 0.5

@@ -12,6 +12,7 @@ import UIKit
 
 extension UIView {
     
+    /// ---> Function for add black shadow to view  <--- ///
     func addBlackShadow() {
         layer.shadowColor   = UIColor.black.cgColor
         layer.shadowRadius  = 3.0

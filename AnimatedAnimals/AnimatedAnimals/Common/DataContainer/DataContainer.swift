@@ -14,9 +14,11 @@ final class DataContainer {
     
     static let shared = DataContainer()
     
-    var allAnimals: [AnimalObject]?
-    var selectedDetailType: AnimalsTypes = .none
+    var allAnimals: [AnimalObject]?                 // All animals objects
+    var selectedDetailType: AnimalsTypes = .none    // Selected type for details
     
+    
+    /// ---> Function for make animals objects <--- ///
     func makeAnimals() {
         let dataArrays = [testCats,
                           testDogs,
@@ -56,5 +58,31 @@ final class DataContainer {
         }
         
         allAnimals = animalsArray
+    }
+    
+    
+    /// ---> Function for make data source on animals page <--- ///
+    func makeAnimalsDataSource(_ completion: @escaping ((_ result: AnyObject) -> Void)) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            DataContainer.shared.makeAnimals()
+            
+            DispatchQueue.global(qos: .userInitiated).async {
+                var animalsArray = [[AnimalObject]]()
+                
+                if let all = DataContainer.shared.allAnimals {
+                    let animalsTypes = AnimalsTypes.getAllTypes()
+                    
+                    for type in animalsTypes {
+                        let animals = all.filter { $0.type == type }
+                        
+                        animalsArray.append(animals)
+                    }
+                    
+                    completion(animalsArray as AnyObject)
+                } else {
+                    completion("Data source is empty." as AnyObject)
+                }
+            }
+        }
     }
 }

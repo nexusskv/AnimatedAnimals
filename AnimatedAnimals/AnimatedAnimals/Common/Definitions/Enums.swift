@@ -19,14 +19,19 @@ enum AnimalsTypes: Int {
     case lion
     case tiger
     
+    /// ---> Function for get all types  <--- ///
     static func getAllTypes() -> [AnimalsTypes] {
         return [.cat, .dog, .parrot, .fox, .squirrel, .lion, .tiger]
     }
     
+    
+    /// ---> Function for get all names  <--- ///
     static func getAllNames() -> [String] {
         return ["Cats", "Dogs", "Parrots", "Foxes", "Squirrels", "Lions", "Tigers"]
     }
     
+    
+    /// ---> Function for get name by type  <--- ///
     static func getName(_ type: Int) -> String {
         let all = getAllNames()
 
@@ -34,15 +39,18 @@ enum AnimalsTypes: Int {
     }
 }
 
+
 enum TransitionType: Int {
     case push
     case pop
 }
 
+
 enum CellTypes: Int {
     case collectionCell
     case tableCell
 }
+
 
 enum SizesTypes: Int {
     case header = 0

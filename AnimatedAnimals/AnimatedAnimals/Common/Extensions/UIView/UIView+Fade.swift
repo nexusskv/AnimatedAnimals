@@ -12,7 +12,7 @@ import UIKit
 
 extension UIView {
     
-    
+    /// ---> Function for show/hide view with fade animation <--- ///
     func showView(_ flag: Bool) {
         if flag {
             UIView.animate(withDuration: 0.8,
