@@ -12,16 +12,22 @@ import UIKit
 
 extension DetailsViewController {
     
+    /// ---> Function for UI customisations  <--- ///
     func setupUI() {
         aboutWebView.navigationDelegate = self
         
         let swipeGesture = UISwipeGestureRecognizer(target: self,
-                                                    action: #selector(swipeReceived))
+                                                    action: #selector(handleSwipe))
         swipeGesture.direction = .up
 
         view.addGestureRecognizer(swipeGesture)
+        
+        let imageRadius = animalImage.frame.size.width / 2.0
+        animalImage.roundCorners(imageRadius, border: 0.7, color: .lightGray)
     }
     
+    
+    /// ---> Function for load content on webview <--- ///
     func loadContent() {
         activityIndicator.startAnimating()
         
@@ -31,11 +37,12 @@ extension DetailsViewController {
             let animals = all.filter { $0.type == selectedType }
             if let animal = animals.first {
                 animalImage.setUrl(animal.url)
-                
-                animalTitle.text = animal.name
+
+                animalTitle.text = AnimalsTypes.getName(selectedType.rawValue)
                 
                 totalLikes.text = "\(animals.reduce(0, {$0 + $1.likes}))"
             }
+            
             let url = testUrls[selectedType.rawValue]
             if let request = RequestBuilder.makeContentRequest(url) {
                 aboutWebView.load(request)
@@ -43,6 +50,5 @@ extension DetailsViewController {
         } else {
             Router.dismiss(self)
         }
-
     }
 }

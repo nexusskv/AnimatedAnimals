@@ -12,10 +12,10 @@ import UIKit
 
 class AnimalsViewController: UIViewController {
     @IBOutlet weak var dataTable: UITableView!
+    @IBOutlet weak var likeDetailsView: LikeDetailsView!
     
     var dataArray: [[AnimalObject]] = []  // data array for first cell
-    var selectedAnimal: Int = 0
-    let bottomInset = UIScreen.main.bounds.height / 2.8
+    var selectedAnimal: Int = 0    
     var bottomView: UIView!
     var likesView: LikesView!
     
@@ -25,7 +25,7 @@ class AnimalsViewController: UIViewController {
 
         addObservers()
         
-        makeDataSource()
+        setDataSource()
         
         setupUI()
     }

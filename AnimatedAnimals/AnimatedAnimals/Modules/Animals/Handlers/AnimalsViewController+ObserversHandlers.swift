@@ -1,0 +1,46 @@
+//
+//  AnimalsViewController+ObserversHandlers.swift
+//  AnimatedAnimals
+//
+//  Created by Rost on 01.01.2020.
+//  Copyright © 2020 Rost Gress. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+
+extension AnimalsViewController {
+    
+    @objc func reloadLikedList(_ sender: NSNotification) {
+        if let info = sender.userInfo {
+            if let index = info["index"] as? Int {
+                likeDetailsView.showView(false)
+                
+                selectedAnimal = index
+
+                likesView.setValues(dataArray, at: selectedAnimal)
+            }
+        }
+    }
+    
+    
+    @objc func showDetails(_ sender: NSNotification) {
+        Router.present("Details", from: self)
+    }
+    
+    
+    @objc func showLikeDetails(_ sender: NSNotification) {
+        if let info = sender.userInfo {
+            if let like = info["like"] as? AnimalObject {
+                likeDetailsView.setValues(like)
+            }
+            
+            if let rect = info["rect"] as? CGRect {
+                likeDetailsView.frame = rect
+                
+                likeDetailsView.showView(true)
+            }
+        }
+    }
+}
