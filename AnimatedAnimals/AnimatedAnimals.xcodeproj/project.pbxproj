@@ -49,7 +49,7 @@
 		1195B6B723B02AFD00E5285F /* AnimalsViewController+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195B6B623B02AFD00E5285F /* AnimalsViewController+Functions.swift */; };
 		1195B6BA23B02CE600E5285F /* AnimalsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195B6B923B02CE600E5285F /* AnimalsViewCell.swift */; };
 		1195B6BE23B02D3B00E5285F /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195B6BD23B02D3B00E5285F /* AsyncImageView.swift */; };
-		1195B6C023B02DFF00E5285F /* AnimalsTableCell+TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195B6BF23B02DFF00E5285F /* AnimalsTableCell+TableDataSource.swift */; };
+		1195B6C023B02DFF00E5285F /* AnimalsViewController+TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195B6BF23B02DFF00E5285F /* AnimalsViewController+TableDataSource.swift */; };
 		1195B6C323B030A500E5285F /* TopTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195B6C223B030A500E5285F /* TopTableCell.swift */; };
 		1195B6CC23B033A600E5285F /* LikesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195B6CB23B033A600E5285F /* LikesCell.swift */; };
 		11B4AC2023B5704E00B71A93 /* LikesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4AC1F23B5704E00B71A93 /* LikesView.swift */; };
@@ -58,7 +58,7 @@
 		11B4AC2723B5719800B71A93 /* LikesView+Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4AC2623B5719800B71A93 /* LikesView+Table.swift */; };
 		11CF0B5823B385900000232F /* AnimalsViewController+ScrollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CF0B5723B385900000232F /* AnimalsViewController+ScrollDelegate.swift */; };
 		11E2DED623BAA4CC00FBCBBF /* LikeDetailsView+Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E2DED523BAA4CC00FBCBBF /* LikeDetailsView+Setter.swift */; };
-		11E2DED823BAB93100FBCBBF /* AnimalsTableCell+TableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E2DED723BAB93100FBCBBF /* AnimalsTableCell+TableDelegate.swift */; };
+		11E2DED823BAB93100FBCBBF /* AnimalsViewController+TableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E2DED723BAB93100FBCBBF /* AnimalsViewController+TableDelegate.swift */; };
 		11E2DEDA23BAD5E800FBCBBF /* LikeDetailsView+Handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E2DED923BAD5E800FBCBBF /* LikeDetailsView+Handlers.swift */; };
 		11E2DEDC23BADAB900FBCBBF /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E2DEDB23BADAB900FBCBBF /* UIView+Shadow.swift */; };
 		11F27ED923B18451001416B9 /* UIView+Corners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F27ED823B18451001416B9 /* UIView+Corners.swift */; };
@@ -125,7 +125,7 @@
 		1195B6B623B02AFD00E5285F /* AnimalsViewController+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalsViewController+Functions.swift"; sourceTree = "<group>"; };
 		1195B6B923B02CE600E5285F /* AnimalsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsViewCell.swift; sourceTree = "<group>"; };
 		1195B6BD23B02D3B00E5285F /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
-		1195B6BF23B02DFF00E5285F /* AnimalsTableCell+TableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalsTableCell+TableDataSource.swift"; sourceTree = "<group>"; };
+		1195B6BF23B02DFF00E5285F /* AnimalsViewController+TableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalsViewController+TableDataSource.swift"; sourceTree = "<group>"; };
 		1195B6C223B030A500E5285F /* TopTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTableCell.swift; sourceTree = "<group>"; };
 		1195B6CB23B033A600E5285F /* LikesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesCell.swift; sourceTree = "<group>"; };
 		11B4AC1F23B5704E00B71A93 /* LikesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesView.swift; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 		11B4AC2623B5719800B71A93 /* LikesView+Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikesView+Table.swift"; sourceTree = "<group>"; };
 		11CF0B5723B385900000232F /* AnimalsViewController+ScrollDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalsViewController+ScrollDelegate.swift"; sourceTree = "<group>"; };
 		11E2DED523BAA4CC00FBCBBF /* LikeDetailsView+Setter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikeDetailsView+Setter.swift"; sourceTree = "<group>"; };
-		11E2DED723BAB93100FBCBBF /* AnimalsTableCell+TableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalsTableCell+TableDelegate.swift"; sourceTree = "<group>"; };
+		11E2DED723BAB93100FBCBBF /* AnimalsViewController+TableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalsViewController+TableDelegate.swift"; sourceTree = "<group>"; };
 		11E2DED923BAD5E800FBCBBF /* LikeDetailsView+Handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikeDetailsView+Handlers.swift"; sourceTree = "<group>"; };
 		11E2DEDB23BADAB900FBCBBF /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		11F27ED823B18451001416B9 /* UIView+Corners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Corners.swift"; sourceTree = "<group>"; };
@@ -327,8 +327,8 @@
 		1188956823BC4DBD00D1BC32 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
-				1195B6BF23B02DFF00E5285F /* AnimalsTableCell+TableDataSource.swift */,
-				11E2DED723BAB93100FBCBBF /* AnimalsTableCell+TableDelegate.swift */,
+				1195B6BF23B02DFF00E5285F /* AnimalsViewController+TableDataSource.swift */,
+				11E2DED723BAB93100FBCBBF /* AnimalsViewController+TableDelegate.swift */,
 				11CF0B5723B385900000232F /* AnimalsViewController+ScrollDelegate.swift */,
 			);
 			path = Delegates;
@@ -762,13 +762,13 @@
 				11E2DED623BAA4CC00FBCBBF /* LikeDetailsView+Setter.swift in Sources */,
 				1195B6B723B02AFD00E5285F /* AnimalsViewController+Functions.swift in Sources */,
 				11CF0B5823B385900000232F /* AnimalsViewController+ScrollDelegate.swift in Sources */,
-				11E2DED823BAB93100FBCBBF /* AnimalsTableCell+TableDelegate.swift in Sources */,
+				11E2DED823BAB93100FBCBBF /* AnimalsViewController+TableDelegate.swift in Sources */,
 				115DF02F23B0E49B0025FDD0 /* DataContainer.swift in Sources */,
 				11F27EE123B1970D001416B9 /* AnimalsContainerView+FlowLayout.swift in Sources */,
 				115C437C23B7A240003F2D8A /* TestData.swift in Sources */,
 				1188955723BC3A9E00D1BC32 /* IndexGetter.swift in Sources */,
 				11182E4923B2D8C2009B9F6C /* LikesCell+Setter.swift in Sources */,
-				1195B6C023B02DFF00E5285F /* AnimalsTableCell+TableDataSource.swift in Sources */,
+				1195B6C023B02DFF00E5285F /* AnimalsViewController+TableDataSource.swift in Sources */,
 				11E2DEDA23BAD5E800FBCBBF /* LikeDetailsView+Handlers.swift in Sources */,
 				11B4AC2723B5719800B71A93 /* LikesView+Table.swift in Sources */,
 				11182E4423B29543009B9F6C /* AnimalsContainerView+ScrollDelegate.swift in Sources */,
