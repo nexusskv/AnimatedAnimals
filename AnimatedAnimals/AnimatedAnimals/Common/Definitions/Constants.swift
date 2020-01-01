@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 /// ---> API and params for test images <--- ///
@@ -15,8 +16,12 @@ let compressParam   = "auto=compress&cs=tinysrgb&dpr=1&w=500"
 
 
 let topTableTag         = 500
-let likesTableTag       = 1000
-let topCollectionTag    = 2000
 
-let reloadListName  = NSNotification.Name("reloadLikedList")
-let showDetailsName = NSNotification.Name("showAnimalDetails")
+let reloadListName      = NSNotification.Name("reloadLikedList")
+let showDetailsName     = NSNotification.Name("showAnimalDetails")
+let showLikeDetailsName = NSNotification.Name("showLikeDetails")
+
+let bottomInset         = UIScreen.main.bounds.height / 2.8
+let offsetY             = bottomInset - 85.0
+
+let sectionInset: CGFloat = 10.0            // Inset for section of collection view 
