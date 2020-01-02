@@ -29,18 +29,16 @@ final class DataContainer {
                           testTigers]
         
         var typeCount = 0
-        
+                
         var animalsArray = [AnimalObject]()
         for animals in dataArrays {
+            var nameCount = 1
+            
             for animal in animals {
                 let animalParams = animal.components(separatedBy: "/")
-                let likes = Int(animalParams[0])
-                let path = animalParams[1]
-                let url = testApi + "/" + animal + "?" + compressParam
-                var name = path.replacingOccurrences(of: "-", with: " ")
-                name = name.replacingOccurrences(of: "pexels", with: "")
-                name = name.replacingOccurrences(of: ".jpg", with: "")
-                name = name.replacingOccurrences(of: ".jpeg", with: "")
+                let likes   = Int(animalParams[0])
+                let url     = testApi + "/" + animal + "?" + compressParam
+                let name    = AnimalsTypes.getAnimalName(typeCount) + " \(nameCount)"
                 
                 if let type = AnimalsTypes(rawValue: typeCount) {
                     if let number = likes  {
@@ -52,6 +50,8 @@ final class DataContainer {
                         animalsArray.append(animalObject)
                     }
                 }
+                
+                nameCount += 1
             }
             
             typeCount += 1

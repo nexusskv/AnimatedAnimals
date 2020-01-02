@@ -25,6 +25,13 @@ enum AnimalsTypes: Int {
     }
     
     
+    /// ---> Function for get animal name  <--- ///
+    static func getAnimalName(_ type: Int) -> String {
+        let allNames = ["Cat", "Dog", "Parrot", "Fox", "Squirrel", "Lion", "Tiger"]
+        return allNames[type]
+    }
+    
+    
     /// ---> Function for get all names  <--- ///
     static func getAllNames() -> [String] {
         return ["Cats", "Dogs", "Parrots", "Foxes", "Squirrels", "Lions", "Tigers"]
@@ -41,8 +48,8 @@ enum AnimalsTypes: Int {
 
 
 enum TransitionType: Int {
-    case push
-    case pop
+    case present
+    case dismiss
 }
 
 

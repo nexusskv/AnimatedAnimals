@@ -63,4 +63,14 @@ class UIMaker {
         
         return likesView
     }
+    
+    
+    /// ---> Function for make swipe up gesture recognizer  <--- ///
+    static func makeSwipeUp(_ object: AnyObject, and selector: Selector) -> UISwipeGestureRecognizer {
+        let swipeUp = UISwipeGestureRecognizer(target: object,
+                                               action: selector)
+        swipeUp.direction = .up
+        
+        return swipeUp
+    }
 }
