@@ -14,20 +14,6 @@ extension LikeDetailsView {
         
     /// ---> Function for handle tap gesture  <--- ///
     @objc func handleTap() {
-        var viewRect = frame
-        viewRect.size = .zero
-        frame = viewRect
-        
-        scaledView(false, completion: { [weak self] _ in
-            guard let strongSelf = self else {
-                return
-            }
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                strongSelf.scaledView(true, completion: { _ in
-                    strongSelf.showView(false)
-                })
-            }
-        })
+        self.collapse()
     }
 }

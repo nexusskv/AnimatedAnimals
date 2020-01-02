@@ -39,7 +39,11 @@ extension AnimalsViewController {
             if let rect = info["rect"] as? CGRect {
                 likeDetailsView.frame = rect
                 
-                likeDetailsView.showView(true)
+                if likeDetailsView.alpha == 1.0 {
+                    likeDetailsView.collapse()
+                }
+                
+                likeDetailsView.expand()
             }
         }
     }

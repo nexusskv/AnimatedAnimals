@@ -26,6 +26,7 @@
 		11611F7623BCFE7700FF9259 /* AnimalsViewController+ObserversHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11611F7523BCFE7700FF9259 /* AnimalsViewController+ObserversHandlers.swift */; };
 		11611F7A23BD032F00FF9259 /* UIMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11611F7923BD032F00FF9259 /* UIMaker.swift */; };
 		11611F7C23BD094300FF9259 /* UIView+ColoredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11611F7B23BD094300FF9259 /* UIView+ColoredView.swift */; };
+		11611F7E23BD4FAA00FF9259 /* UIView+Collapse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11611F7D23BD4FAA00FF9259 /* UIView+Collapse.swift */; };
 		116F783723BA4A9900971AEA /* LikeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F783623BA4A9900971AEA /* LikeDetailsView.swift */; };
 		117F4AF623B8D707003248C7 /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F4AF523B8D707003248C7 /* UIView+Anchors.swift */; };
 		117F4B0023B97737003248C7 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F4AFF23B97737003248C7 /* RequestBuilder.swift */; };
@@ -101,6 +102,7 @@
 		11611F7523BCFE7700FF9259 /* AnimalsViewController+ObserversHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalsViewController+ObserversHandlers.swift"; sourceTree = "<group>"; };
 		11611F7923BD032F00FF9259 /* UIMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMaker.swift; sourceTree = "<group>"; };
 		11611F7B23BD094300FF9259 /* UIView+ColoredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ColoredView.swift"; sourceTree = "<group>"; };
+		11611F7D23BD4FAA00FF9259 /* UIView+Collapse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Collapse.swift"; sourceTree = "<group>"; };
 		116F783623BA4A9900971AEA /* LikeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeDetailsView.swift; sourceTree = "<group>"; };
 		117F4AF523B8D707003248C7 /* UIView+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
 		117F4AFF23B97737003248C7 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
@@ -631,6 +633,7 @@
 				1188954E23BBB23300D1BC32 /* UIView+HighlightZoom.swift */,
 				1188955D23BC451C00D1BC32 /* UIView+Fade.swift */,
 				11611F7B23BD094300FF9259 /* UIView+ColoredView.swift */,
+				11611F7D23BD4FAA00FF9259 /* UIView+Collapse.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -805,6 +808,7 @@
 				11182E4923B2D8C2009B9F6C /* LikesCell+Setter.swift in Sources */,
 				1195B6C023B02DFF00E5285F /* AnimalsViewController+TableDataSource.swift in Sources */,
 				11E2DEDA23BAD5E800FBCBBF /* LikeDetailsView+Handlers.swift in Sources */,
+				11611F7E23BD4FAA00FF9259 /* UIView+Collapse.swift in Sources */,
 				11611F7423BCF9FC00FF9259 /* AlertPresenter.swift in Sources */,
 				11B4AC2723B5719800B71A93 /* LikesView+Table.swift in Sources */,
 				11182E4423B29543009B9F6C /* AnimalsContainerView+ScrollDelegate.swift in Sources */,
