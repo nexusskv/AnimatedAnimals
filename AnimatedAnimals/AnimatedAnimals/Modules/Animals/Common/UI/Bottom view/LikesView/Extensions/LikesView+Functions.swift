@@ -34,14 +34,10 @@ extension LikesView {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                 cell.scaledView(false, by: .tableCell)
-                
-                var viewRect = cell.frame
-                viewRect.size = .zero
 
                 NotificationCenter.default.post(name: showLikeDetailsName,
                                                 object: nil,
-                                                userInfo: ["rect": viewRect,
-                                                           "like": likeObject])
+                                                userInfo: ["like": likeObject])
             }
         }
     }    

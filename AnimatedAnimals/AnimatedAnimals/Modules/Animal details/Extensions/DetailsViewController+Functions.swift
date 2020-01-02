@@ -16,11 +16,8 @@ extension DetailsViewController {
     func setupUI() {
         aboutWebView.navigationDelegate = self
         
-        let swipeGesture = UISwipeGestureRecognizer(target: self,
-                                                    action: #selector(handleSwipe))
-        swipeGesture.direction = .up
-
-        view.addGestureRecognizer(swipeGesture)
+        let swipeUp = UIMaker.makeSwipeUp(self, and: #selector(handleSwipe))
+        view.addGestureRecognizer(swipeUp)
         
         let imageRadius = animalImage.frame.size.width / 2.0
         animalImage.roundCorners(imageRadius, border: 0.7, color: .lightGray)

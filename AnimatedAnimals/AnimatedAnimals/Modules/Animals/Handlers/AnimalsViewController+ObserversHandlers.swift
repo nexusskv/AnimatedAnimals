@@ -12,6 +12,7 @@ import UIKit
 
 extension AnimalsViewController {
     
+    /// ---> Function for reload liked list <--- ///
     @objc func reloadLikedList(_ sender: NSNotification) {
         if let info = sender.userInfo {
             if let index = info["index"] as? Int {
@@ -25,19 +26,17 @@ extension AnimalsViewController {
     }
     
     
+    /// ---> Function for show details view <--- ///
     @objc func showDetails(_ sender: NSNotification) {
         Router.present("Details", from: self)
     }
     
     
+    /// ---> Function for show like details view <--- ///
     @objc func showLikeDetails(_ sender: NSNotification) {
         if let info = sender.userInfo {
             if let like = info["like"] as? AnimalObject {
                 likeDetailsView.setValues(like)
-            }
-            
-            if let rect = info["rect"] as? CGRect {
-                likeDetailsView.frame = rect
                 
                 if likeDetailsView.alpha == 1.0 {
                     likeDetailsView.collapse()

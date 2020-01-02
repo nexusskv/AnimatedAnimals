@@ -12,6 +12,7 @@ import UIKit
 
 extension AnimalsViewController {
     
+    /// ---> Function for change content on scroll view <--- ///
     func changeScrollViewContent(_ scroll: UIScrollView) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
@@ -21,6 +22,7 @@ extension AnimalsViewController {
     }
     
     
+    /// ---> Function for handle drag on scroll view <--- ///
     func handleDragOrScroll(_ scroll: UIScrollView) {
         if scroll.tag == topTableTag {
             if scroll.contentOffset.y > bottomInset {
@@ -30,6 +32,7 @@ extension AnimalsViewController {
     }
     
     
+    /// ---> Function for handle scroll animation on scroll view <--- ///
     func handleDeceleratedScroll(_ scroll: UIScrollView) {
         if scroll.tag == topTableTag {
             if scroll.contentOffset.y > offsetY &&

@@ -12,6 +12,7 @@ import UIKit
 
 extension AnimalsViewController {
     
+    /// ---> Function for UI customisations  <--- ///
     func setupUI() {
         dataTable.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: bottomInset, right: 0.0)
         
@@ -24,6 +25,7 @@ extension AnimalsViewController {
     }
     
     
+    /// ---> Function for set values to UI <--- ///
     func setDataSource() {
         DataContainer.shared.makeAnimalsDataSource { result in
             DispatchQueue.main.async { [weak self] in

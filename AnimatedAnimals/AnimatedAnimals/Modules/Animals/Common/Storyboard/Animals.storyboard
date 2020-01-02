@@ -175,7 +175,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nri-rj-wOf" customClass="LikeDetailsView" customModule="AnimatedAnimals" customModuleProvider="target">
-                                <rect key="frame" x="5" y="144" width="404" height="262"/>
+                                <rect key="frame" x="5" y="317" width="404" height="262"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bnq-S9-wgE" customClass="AsyncImageView" customModule="AnimatedAnimals" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="404" height="262"/>
@@ -240,8 +240,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Nri-rj-wOf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FCQ-jS-2WS"/>
                             <constraint firstItem="aV8-gi-ELf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KLE-Eg-vPj"/>
-                            <constraint firstItem="Nri-rj-wOf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="NdS-j0-O3L"/>
                             <constraint firstItem="aV8-gi-ELf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UQl-NW-mR9"/>
                             <constraint firstItem="aV8-gi-ELf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vgd-1A-YMY"/>
                             <constraint firstItem="aV8-gi-ELf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eYG-Hx-UcU"/>

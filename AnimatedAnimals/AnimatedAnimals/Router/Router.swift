@@ -18,7 +18,7 @@ class Router {
         let child = storyboard.instantiateViewController(withIdentifier: vc + "ViewController")
         child.modalPresentationStyle = .fullScreen
         
-        let transition = makeTransition(.push)
+        let transition = makeTransition(.present)
 
         parent.view.window!.layer.add(transition, forKey: kCATransition)
         parent.present(child, animated: false, completion: nil)
@@ -28,7 +28,7 @@ class Router {
     
     /// ---> Function for close some view controller from other view controller <--- ///
     static func dismiss(_ vc: UIViewController) {
-        let transition = makeTransition(.pop)
+        let transition = makeTransition(.dismiss)
         vc.view.window!.layer.add(transition, forKey: kCATransition)
         
         vc.dismiss(animated: false, completion: nil)

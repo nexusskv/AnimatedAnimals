@@ -24,11 +24,10 @@ extension LikeDetailsView {
         layer.shadowColor       = UIColor.black.cgColor
         layer.shouldRasterize   = true
         
-        roundCorners(7.0, border: 0.8, color: .darkGray)
+        roundCorners(7.0, border: 1.8, color: .darkGray)
         
-        let tapGesture = UITapGestureRecognizer(target: self,
-                                                action: #selector(handleTap))
-        addGestureRecognizer(tapGesture)
+        let swipeUp = UIMaker.makeSwipeUp(self, and: #selector(handleSwipe))
+        addGestureRecognizer(swipeUp)
     }
     
     

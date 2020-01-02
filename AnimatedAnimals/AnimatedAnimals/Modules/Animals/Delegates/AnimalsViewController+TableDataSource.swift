@@ -12,7 +12,7 @@ import UIKit
 
 extension AnimalsViewController: UITableViewDataSource {
       
-    /// ---> Table view data source functions <--- ///
+    /// ---> Functions from table view data source protocol <--- ///
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell.makeEmptyCell()
                 

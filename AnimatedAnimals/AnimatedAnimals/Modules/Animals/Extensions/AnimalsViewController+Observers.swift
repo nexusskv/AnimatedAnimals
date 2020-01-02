@@ -12,6 +12,7 @@ import UIKit
 
 extension AnimalsViewController {
     
+    /// ---> Function for add observers  <--- ///
     func addObservers() {
         let defaultCenter = NotificationCenter.default
         
@@ -32,6 +33,7 @@ extension AnimalsViewController {
     }
     
     
+    /// ---> Function for remove observers <--- ///
     func removeObservers() {
         NotificationCenter.default.removeObserver(self)
     }

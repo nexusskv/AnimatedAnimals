@@ -19,9 +19,9 @@ extension Router {
         transition.type             = .reveal
         transition.subtype          = .fromTop
         switch type {
-            case .push:
+            case .present:
                 transition.timingFunction   = CAMediaTimingFunction(name: .default)
-            case .pop:
+            case .dismiss:
                 transition.timingFunction   = CAMediaTimingFunction(name: .easeInEaseOut)
         }
         

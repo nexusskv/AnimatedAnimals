@@ -13,7 +13,7 @@ import UIKit
 extension LikeDetailsView {
         
     /// ---> Function for handle tap gesture  <--- ///
-    @objc func handleTap() {
+    @objc func handleSwipe() {
         self.collapse()
     }
 }

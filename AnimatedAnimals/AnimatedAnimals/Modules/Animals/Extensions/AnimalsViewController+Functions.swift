@@ -12,6 +12,7 @@ import UIKit
 
 extension AnimalsViewController {
           
+    /// ---> Function for refresh tables  <--- ///
     func refreshTables() {
         dataTable.reloadData()
         

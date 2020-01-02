@@ -12,7 +12,7 @@ import UIKit
 
 extension AnimalsViewController: UITableViewDelegate {
       
-    /// ---> Table view delegate functions <--- ///
+    /// ---> Functions from table view delegate <--- ///
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 
         return 1.0
