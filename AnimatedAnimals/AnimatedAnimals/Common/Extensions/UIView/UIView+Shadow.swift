@@ -20,4 +20,15 @@ extension UIView {
         layer.shadowOffset  = CGSize(width: 1, height: 1)
         layer.masksToBounds = false
     }
+    
+    
+    /// ---> Function for add custom shadow to view  <--- ///
+    func addCustomShadow() {
+        layer.masksToBounds     = false
+        layer.shadowOpacity     = 0.33
+        layer.shadowRadius      = 4
+        layer.shadowOffset      = CGSize(width: 1, height: 1)
+        layer.shadowColor       = UIColor.black.cgColor
+        layer.shouldRasterize   = true
+    }
 }

@@ -43,7 +43,7 @@
 		1188956023BC494200D1BC32 /* AnimalsViewController+Setters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1188955F23BC494200D1BC32 /* AnimalsViewController+Setters.swift */; };
 		1188956523BC4BB300D1BC32 /* UITableViewCell+EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1188956423BC4BB300D1BC32 /* UITableViewCell+EmptyCell.swift */; };
 		1188956723BC4C6200D1BC32 /* AnimalsViewController+ScrollHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1188956623BC4C6200D1BC32 /* AnimalsViewController+ScrollHandlers.swift */; };
-		1195B68523AFF9FD00E5285F /* AnimatedAnimalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195B68423AFF9FD00E5285F /* AnimatedAnimalsTests.swift */; };
+		1195B68523AFF9FD00E5285F /* AnimalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195B68423AFF9FD00E5285F /* AnimalsUITests.swift */; };
 		1195B69823B01B0300E5285F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195B69623B01B0300E5285F /* AppDelegate.swift */; };
 		1195B69923B01B0300E5285F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195B69723B01B0300E5285F /* SceneDelegate.swift */; };
 		1195B69D23B01BB800E5285F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1195B69C23B01BB800E5285F /* Constants.swift */; };
@@ -61,6 +61,7 @@
 		11B4AC2323B570BF00B71A93 /* LikesView+Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4AC2223B570BF00B71A93 /* LikesView+Setter.swift */; };
 		11B4AC2523B5716200B71A93 /* LikesView+Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4AC2423B5716200B71A93 /* LikesView+Functions.swift */; };
 		11B4AC2723B5719800B71A93 /* LikesView+TableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B4AC2623B5719800B71A93 /* LikesView+TableDelegate.swift */; };
+		11C89D0F23BE7ED80004EB51 /* DetailsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C89D0E23BE7ED80004EB51 /* DetailsUITests.swift */; };
 		11CF0B5823B385900000232F /* AnimalsViewController+ScrollDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CF0B5723B385900000232F /* AnimalsViewController+ScrollDelegate.swift */; };
 		11E2DED623BAA4CC00FBCBBF /* LikeDetailsView+Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E2DED523BAA4CC00FBCBBF /* LikeDetailsView+Setter.swift */; };
 		11E2DED823BAB93100FBCBBF /* AnimalsViewController+TableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E2DED723BAB93100FBCBBF /* AnimalsViewController+TableDelegate.swift */; };
@@ -122,7 +123,7 @@
 		1188956623BC4C6200D1BC32 /* AnimalsViewController+ScrollHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalsViewController+ScrollHandlers.swift"; sourceTree = "<group>"; };
 		1195B66A23AFF9F800E5285F /* AnimatedAnimals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimatedAnimals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1195B68023AFF9FD00E5285F /* AnimatedAnimalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimatedAnimalsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1195B68423AFF9FD00E5285F /* AnimatedAnimalsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedAnimalsTests.swift; sourceTree = "<group>"; };
+		1195B68423AFF9FD00E5285F /* AnimalsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsUITests.swift; sourceTree = "<group>"; };
 		1195B68623AFF9FD00E5285F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1195B69623B01B0300E5285F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1195B69723B01B0300E5285F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +143,7 @@
 		11B4AC2223B570BF00B71A93 /* LikesView+Setter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikesView+Setter.swift"; sourceTree = "<group>"; };
 		11B4AC2423B5716200B71A93 /* LikesView+Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikesView+Functions.swift"; sourceTree = "<group>"; };
 		11B4AC2623B5719800B71A93 /* LikesView+TableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikesView+TableDelegate.swift"; sourceTree = "<group>"; };
+		11C89D0E23BE7ED80004EB51 /* DetailsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsUITests.swift; sourceTree = "<group>"; };
 		11CF0B5723B385900000232F /* AnimalsViewController+ScrollDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalsViewController+ScrollDelegate.swift"; sourceTree = "<group>"; };
 		11E2DED523BAA4CC00FBCBBF /* LikeDetailsView+Setter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LikeDetailsView+Setter.swift"; sourceTree = "<group>"; };
 		11E2DED723BAB93100FBCBBF /* AnimalsViewController+TableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalsViewController+TableDelegate.swift"; sourceTree = "<group>"; };
@@ -343,13 +345,13 @@
 			path = IndexGetter;
 			sourceTree = "<group>";
 		};
-		1188955A23BC43ED00D1BC32 /* Delegates */ = {
+		1188955A23BC43ED00D1BC32 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				11F27EE023B1970D001416B9 /* AnimalsContainerView+CollectionDelegate.swift */,
 				11182E4323B29543009B9F6C /* AnimalsContainerView+ScrollDelegate.swift */,
 			);
-			path = Delegates;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		1188956323BC4B7500D1BC32 /* UITableViewCell */ = {
@@ -360,14 +362,14 @@
 			path = UITableViewCell;
 			sourceTree = "<group>";
 		};
-		1188956823BC4DBD00D1BC32 /* Delegates */ = {
+		1188956823BC4DBD00D1BC32 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				1195B6BF23B02DFF00E5285F /* AnimalsViewController+TableDataSource.swift */,
 				11E2DED723BAB93100FBCBBF /* AnimalsViewController+TableDelegate.swift */,
 				11CF0B5723B385900000232F /* AnimalsViewController+ScrollDelegate.swift */,
 			);
-			path = Delegates;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		1195B66123AFF9F800E5285F = {
@@ -403,7 +405,7 @@
 		1195B68323AFF9FD00E5285F /* AnimatedAnimalsTests */ = {
 			isa = PBXGroup;
 			children = (
-				1195B68423AFF9FD00E5285F /* AnimatedAnimalsTests.swift */,
+				11C89D0023BE3AD60004EB51 /* UI tests */,
 				1195B68623AFF9FD00E5285F /* Info.plist */,
 			);
 			path = AnimatedAnimalsTests;
@@ -449,10 +451,10 @@
 			isa = PBXGroup;
 			children = (
 				115DF02D23B0E4800025FDD0 /* DataContainer */,
+				1195B69B23B01BA500E5285F /* Definitions */,
 				1188955423BC3A7B00D1BC32 /* Getters */,
 				1188955023BBFC0800D1BC32 /* Makers */,
 				1195B6BB23B02D1D00E5285F /* UI */,
-				1195B69B23B01BA500E5285F /* Definitions */,
 				11F27ED623B183F3001416B9 /* Extensions */,
 				1195B69323B01AC800E5285F /* Resources */,
 			);
@@ -464,7 +466,7 @@
 			children = (
 				1195B6AE23B023A200E5285F /* AnimalsViewController.swift */,
 				1195B6B023B023F200E5285F /* Extensions */,
-				1188956823BC4DBD00D1BC32 /* Delegates */,
+				1188956823BC4DBD00D1BC32 /* Protocols */,
 				11611F7723BD020300FF9259 /* Handlers */,
 				1195B6A823B0226400E5285F /* Common */,
 			);
@@ -594,6 +596,7 @@
 			children = (
 				11B4AC1F23B5704E00B71A93 /* LikesView.swift */,
 				11B4AC2123B5709F00B71A93 /* Extensions */,
+				11C89D0523BE61BC0004EB51 /* Protocols */,
 			);
 			path = LikesView;
 			sourceTree = "<group>";
@@ -603,10 +606,26 @@
 			children = (
 				11B4AC2223B570BF00B71A93 /* LikesView+Setter.swift */,
 				11B4AC2423B5716200B71A93 /* LikesView+Functions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		11C89D0023BE3AD60004EB51 /* UI tests */ = {
+			isa = PBXGroup;
+			children = (
+				1195B68423AFF9FD00E5285F /* AnimalsUITests.swift */,
+				11C89D0E23BE7ED80004EB51 /* DetailsUITests.swift */,
+			);
+			path = "UI tests";
+			sourceTree = "<group>";
+		};
+		11C89D0523BE61BC0004EB51 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
 				11611F7F23BD777C00FF9259 /* LikesView+TableDataSource.swift */,
 				11B4AC2623B5719800B71A93 /* LikesView+TableDelegate.swift */,
 			);
-			path = Extensions;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		11E2DED423BAA45800FBCBBF /* Extensions */ = {
@@ -646,7 +665,7 @@
 			children = (
 				11F27EDB23B1959F001416B9 /* AnimalsContainerView.swift */,
 				11F27EDD23B195B0001416B9 /* Extensions */,
-				1188955A23BC43ED00D1BC32 /* Delegates */,
+				1188955A23BC43ED00D1BC32 /* Protocols */,
 			);
 			path = AnimalsContainerView;
 			sourceTree = "<group>";
@@ -830,7 +849,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1195B68523AFF9FD00E5285F /* AnimatedAnimalsTests.swift in Sources */,
+				11C89D0F23BE7ED80004EB51 /* DetailsUITests.swift in Sources */,
+				1195B68523AFF9FD00E5285F /* AnimalsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

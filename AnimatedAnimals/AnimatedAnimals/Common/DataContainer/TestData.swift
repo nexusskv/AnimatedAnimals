@@ -82,10 +82,10 @@ let testTigers = ["572861/pexels-photo-572861.jpeg",
 let testUrls = ["https://en.wikipedia.org/wiki/Cat",
                 "https://en.wikipedia.org/wiki/Dog",
                 "https://en.wikipedia.org/wiki/Parrot",
+                "https://en.wikipedia.org/wiki/Fox",
                 "https://en.wikipedia.org/wiki/Squirrel",
                 "https://en.wikipedia.org/wiki/Lion",
-                "https://en.wikipedia.org/wiki/Tiger",
-                "https://en.wikipedia.org/wiki/Cat"]
+                "https://en.wikipedia.org/wiki/Tiger"]
 
 let testDetailsTopUrls = ["399647/pexels-photo-399647.jpeg",
                           "1629781/pexels-photo-1629781.jpeg",

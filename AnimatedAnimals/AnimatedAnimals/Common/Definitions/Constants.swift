@@ -27,6 +27,6 @@ let showLikeDetailsName     = NSNotification.Name("showLikeDetails")
 
 
 /// ---> Insets for table and scroll view <--- ///
-let bottomInset: CGFloat    = UIScreen.main.bounds.height / 2.8
-let offsetY: CGFloat        = bottomInset - 85.0
+let bottomInset: CGFloat    = UIScreen.main.bounds.height / 3.0
+let offsetY: CGFloat        = bottomInset - 30.0
 let sectionInset: CGFloat   = 10.0                              // Inset for section of collection view
