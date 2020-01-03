@@ -11,29 +11,29 @@ import UIKit
 
 
 class UIMaker {
-    
+        
     /// ---> Function for make rect to animal view  <--- ///
     static func makeAnimalsCellViews(_ table: UITableView, array: [[AnimalObject]], at index: Int) -> UIView {
         if let type = SizesTypes(rawValue: index) {
-            let bgRect = makeAnimalsRect(type)
-            
-            let customView = UIView.makeWhiteView(bgRect)
-            
-            switch index {
-                case 0:
+            let bgRect = UIMaker.makeAnimalsRect(type)
+
+            switch type {
+                case .header:
+                    let headerView = UIView.makeWhiteView(bgRect)
+                    
                     let header = table.dequeueReusableCell(withIdentifier: "TopTableCell") as! TopTableCell
                     header.frame = bgRect
                     header.setValues(array)
                     
-                    customView.addSubview(header)
+                    headerView.addSubview(header)
                     
-                    return customView
-                case 1:
-                    let likesView = makeLikesView(bgRect)
-
-                    customView.addSubview(likesView)
-                    
-                    return customView
+                    return headerView
+                
+                case .footer:
+                    let likesView = UIMaker.makeLikesView(bgRect)
+                
+                    return likesView
+                
                 default:
                     break
             }

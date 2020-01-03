@@ -19,8 +19,10 @@ extension AnimalsViewController {
                 likeDetailsView.showView(false)
                 
                 selectedAnimal = index
-
-                likesView.setValues(dataArray, at: selectedAnimal)
+                
+                if let likes = view.viewWithTag(likesViewTag) as? LikesView {
+                    likes.setValues(dataArray, at: selectedAnimal)
+                }
             }
         }
     }

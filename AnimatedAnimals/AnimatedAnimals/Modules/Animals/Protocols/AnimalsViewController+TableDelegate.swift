@@ -20,6 +20,7 @@ extension AnimalsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = UIMaker.makeAnimalsCellViews(tableView, array: dataArray, at: 0)
+        
         return header
     }
     

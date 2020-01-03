@@ -14,7 +14,7 @@ extension AnimalsViewController {
     
     /// ---> Function for change content on scroll view <--- ///
     func changeScrollViewContent(_ scroll: UIScrollView) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
                 scroll.contentOffset.y = offsetY
             })
@@ -22,30 +22,25 @@ extension AnimalsViewController {
     }
     
     
-    /// ---> Function for handle drag on scroll view <--- ///
-    func handleDragOrScroll(_ scroll: UIScrollView) {
-        if scroll.tag == topTableTag {
-            if scroll.contentOffset.y > bottomInset {
-                changeScrollViewContent(scroll)
-            }
-        }
-    }
-    
-    
     /// ---> Function for handle scroll animation on scroll view <--- ///
     func handleDeceleratedScroll(_ scroll: UIScrollView) {
-        if scroll.tag == topTableTag {
-            if scroll.contentOffset.y > offsetY &&
-                scroll.contentOffset.y < bottomInset {
+        if scroll.tag == topTableTag {            
+            if scroll.contentOffset.y > 50 {
                 let height = SizeMaker.makeHeight(.resizedFooter)
                 
-                SizeMaker.makeTableHeight(height, table: dataTable, likes: likesView)
+                if let likes = view.viewWithTag(likesViewTag) as? LikesView {
+                    SizeMaker.changeTableFooter(height, table: dataTable, likes: likes)
+                }
                 
                 changeScrollViewContent(scroll)
-            } else if scroll.contentOffset.y == 0.0 {
+            }
+            
+            if scroll.contentOffset.y <= 0.0 {
                 let height = SizeMaker.makeHeight(.footer)
                 
-                SizeMaker.makeTableHeight(height, table: dataTable, likes: likesView)
+                if let likes = view.viewWithTag(likesViewTag) as? LikesView {
+                    SizeMaker.changeTableFooter(height, table: dataTable, likes: likes)
+                }
             }
         }
     }    

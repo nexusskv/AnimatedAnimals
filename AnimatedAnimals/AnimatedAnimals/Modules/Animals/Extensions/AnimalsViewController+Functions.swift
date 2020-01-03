@@ -22,9 +22,7 @@ extension AnimalsViewController {
             }
             
             if let likes = strongSelf.view.viewWithTag(likesViewTag) as? LikesView {
-                strongSelf.likesView = likes
-                
-                strongSelf.likesView.setValues(strongSelf.dataArray, at: strongSelf.selectedAnimal)
+                likes.setValues(strongSelf.dataArray, at: strongSelf.selectedAnimal)
             }
         }
     }

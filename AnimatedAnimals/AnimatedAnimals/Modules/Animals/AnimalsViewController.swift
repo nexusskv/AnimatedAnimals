@@ -15,9 +15,8 @@ class AnimalsViewController: UIViewController {
     @IBOutlet weak var likeDetailsView: LikeDetailsView!
     
     var dataArray: [[AnimalObject]] = []  // data array for first cell
-    var selectedAnimal: Int = 0    
-    var bottomView: UIView!
-    var likesView: LikesView!
+    var selectedAnimal: Int = 0
+
     
     /// ---> View life cycle <--- ///
     override func viewDidLoad() {
@@ -28,6 +27,14 @@ class AnimalsViewController: UIViewController {
         setDataSource()
         
         setupUI()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        DispatchQueue.main.async {
+            self.dataTable.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: bottomInset, right: 0.0)
+        }        
     }
     
     deinit {

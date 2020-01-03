@@ -16,7 +16,7 @@ extension AnimalsViewCell {
     @IBAction func animalItemButtonTapped(_ sender: UIButton) {
         scaledView(true, by: .collectionCell)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.scaledView(false, by: .collectionCell)
             
             if let type = AnimalsTypes(rawValue: sender.tag) {
