@@ -12,8 +12,11 @@ import UIKit
 
 class LikeDetailsView: UIView {
     @IBOutlet weak var animalImageView: AsyncImageView!
-    @IBOutlet weak var animalLikes: UILabel!
+    @IBOutlet weak var titleImageView: UIImageView!
     @IBOutlet weak var animalTitle: UILabel!
+    @IBOutlet weak var likesImageView: UIImageView!
+    @IBOutlet weak var animalLikes: UILabel!
+    
     
     /// ---> View life cycle <--- ///
     override func awakeFromNib() {

@@ -200,6 +200,7 @@
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nY0-g7-bpx">
                                         <rect key="frame" x="10" y="200" width="20" height="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="Wj7-lI-9K8"/>
                                             <constraint firstAttribute="height" constant="21" id="q7w-Pr-heq"/>
@@ -207,13 +208,14 @@
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suit.heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Gfy-RL-P1F">
                                         <rect key="frame" x="10" y="231" width="20" height="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="aCF-1a-Nf5"/>
                                             <constraint firstAttribute="height" constant="22.5" id="rXJ-iZ-zDu"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="1" green="0.96279627016900382" blue="0.86655233340323012" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="nY0-g7-bpx" firstAttribute="leading" secondItem="Nri-rj-wOf" secondAttribute="leading" constant="10" id="4ki-rq-ftW"/>
                                     <constraint firstItem="Gfy-RL-P1F" firstAttribute="top" secondItem="nY0-g7-bpx" secondAttribute="bottom" constant="8" id="7qo-ij-Aiu"/>
@@ -235,6 +237,8 @@
                                     <outlet property="animalImageView" destination="bnq-S9-wgE" id="ddV-u9-Hyl"/>
                                     <outlet property="animalLikes" destination="E8G-dX-gJZ" id="85B-Z2-x80"/>
                                     <outlet property="animalTitle" destination="hD1-CW-mQd" id="wOH-A5-NRs"/>
+                                    <outlet property="likesImageView" destination="Gfy-RL-P1F" id="xZC-uB-PV6"/>
+                                    <outlet property="titleImageView" destination="nY0-g7-bpx" id="RQN-10-dID"/>
                                 </connections>
                             </view>
                         </subviews>

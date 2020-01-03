@@ -27,6 +27,8 @@ extension LikesView {
 
         addSubview(likesTable)
         
+        likesTable.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 5, paddingRight: 0, width: 0, height: 0, enableInsets: false)
+        
         likesTable.register(LikesCell.self, forCellReuseIdentifier: "LikesCell")
     }
     

@@ -14,15 +14,12 @@ extension LikeDetailsView {
     
     /// ---> Function for UI customisations  <--- ///
     func setupUI() {
+        titleImageView.addBlackShadow()
+        likesImageView.addBlackShadow()
         animalTitle.addBlackShadow()
         animalLikes.addBlackShadow()
 
-        layer.masksToBounds     = false
-        layer.shadowOpacity     = 0.33
-        layer.shadowRadius      = 4
-        layer.shadowOffset      = CGSize(width: 1, height: 1)
-        layer.shadowColor       = UIColor.black.cgColor
-        layer.shouldRasterize   = true
+        self.addCustomShadow()
         
         roundCorners(7.0, border: 1.8, color: .darkGray)
         

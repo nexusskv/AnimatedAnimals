@@ -25,7 +25,7 @@ class SizeMaker {
                 height = screenHeight / 1.927
             
             case .resizedFooter:
-                height = screenHeight - (screenHeight / 4.5)
+                height = screenHeight - (screenHeight / 5.5)
         }
         
         return height
@@ -44,7 +44,8 @@ class SizeMaker {
                 var rect                = likes.frame
                 rect.size.height        = height
                 likes.frame             = rect
-                likes.likesTable.frame  = rect
+                            
+                likes.layoutSubviews()
             })
         }
     }

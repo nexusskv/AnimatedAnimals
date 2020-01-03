@@ -13,8 +13,9 @@ import UIKit
 extension AnimalsViewController {
     
     /// ---> Function for UI customisations  <--- ///
-    func setupUI() {
-        dataTable.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: bottomInset, right: 0.0)
+    func setupUI() {        
+        dataTable.backgroundView  = UIView.makeWhiteView(.zero)
+        dataTable.backgroundColor = .white
         
         dataTable.tag = topTableTag
         
