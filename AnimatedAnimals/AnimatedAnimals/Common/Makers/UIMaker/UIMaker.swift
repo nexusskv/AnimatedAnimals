@@ -33,8 +33,6 @@ class UIMaker {
 
                     customView.addSubview(likesView)
                     
-                    likesView.likesTable.frame = bgRect
-                    
                     return customView
                 default:
                     break
