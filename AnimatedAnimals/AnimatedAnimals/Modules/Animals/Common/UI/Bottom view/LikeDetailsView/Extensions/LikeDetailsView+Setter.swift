@@ -23,8 +23,13 @@ extension LikeDetailsView {
         
         roundCorners(7.0, border: 1.8, color: .darkGray)
         
-        let swipeUp = UIMaker.makeSwipeUp(self, and: #selector(handleSwipe))
-        addGestureRecognizer(swipeUp)
+        let gesturesArray: [SwipeTypes] = [.up, .down]
+        for gesture in gesturesArray {
+            let swipeGesture = UIMaker.makeSwipeGesture(self,
+                                                        type: gesture,
+                                                        selector: #selector(handleSwipe))
+            addGestureRecognizer(swipeGesture)
+        }
     }
     
     

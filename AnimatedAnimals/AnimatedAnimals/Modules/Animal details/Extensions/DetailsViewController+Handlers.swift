@@ -14,7 +14,7 @@ extension DetailsViewController {
     
     /// ---> Function for handle swipe gesture <--- ///
     @objc func handleSwipe(_ sender: UISwipeGestureRecognizer) {
-        if sender.direction == .up {
+        if sender.direction == .left {
             Router.dismiss(self)
         }
     }

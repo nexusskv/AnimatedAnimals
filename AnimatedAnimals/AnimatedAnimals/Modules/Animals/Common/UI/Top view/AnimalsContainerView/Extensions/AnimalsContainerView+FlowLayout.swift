@@ -24,8 +24,24 @@ extension AnimalsContainerView {
                                                   bottom: cellMargin,
                                                   right: sectionInset)
         
-        let width: CGFloat      = (UIScreen.main.bounds.width / 2.0) - 20.0
-        let height: CGFloat     = self.bounds.size.height - 90.0
+        var width: CGFloat      = (UIScreen.main.bounds.width / 2.0) - 20.0
+        var height: CGFloat     = self.bounds.size.height - 90.0
+        
+        if UIDevice().userInterfaceIdiom == .phone {
+            switch UIScreen.main.nativeBounds.height {
+                case 1334:
+                    width  = (UIScreen.main.bounds.width / 2.0) - 60.0
+                    height = self.bounds.size.height - 150.0
+
+                case 1920, 2208:
+                    width  = (UIScreen.main.bounds.width / 2.0) - 40.0
+                    height = self.bounds.size.height - 110.0
+
+                default:
+                    break
+                }
+        }
+        
         animalsLayout.itemSize  = CGSize(width: width, height: height)
 
         animalsView.contentInset = UIEdgeInsets(top: 0.0,

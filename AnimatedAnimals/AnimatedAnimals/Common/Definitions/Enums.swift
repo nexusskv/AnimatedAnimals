@@ -47,7 +47,7 @@ enum AnimalsTypes: Int {
 }
 
 
-enum TransitionType: Int {
+enum TransitionTypes: Int {
     case present
     case dismiss
 }
@@ -63,4 +63,11 @@ enum SizesTypes: Int {
     case header = 0
     case footer
     case resizedFooter
+}
+
+enum SwipeTypes: Int {
+    case up
+    case down
+    case right
+    case left
 }

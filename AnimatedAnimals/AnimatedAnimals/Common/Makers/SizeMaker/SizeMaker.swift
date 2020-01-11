@@ -14,18 +14,14 @@ class SizeMaker {
     
     /// ---> Function for make view custom height <--- ///
     static func makeHeight(_ index: SizesTypes) -> CGFloat {
-        let screenHeight = UIScreen.main.bounds.height
-        
+
         var height: CGFloat = 0.0
         switch index {
             case .header:
-                height = screenHeight / 2.6
+                height = UIScreen.main.bounds.height / 2.6
             
-            case .footer:
-                height = screenHeight / 1.927
-            
-            case .resizedFooter:
-                height = screenHeight - (screenHeight / 5.5)
+            case .footer, .resizedFooter:
+                height = makeFooterHight(index)
         }
         
         return height
@@ -48,5 +44,55 @@ class SizeMaker {
                 table.endUpdates()
             })
         }
+    }
+    
+    
+    /// ---> Function for make footer height for different devices <--- ///
+    static func makeFooterHight(_ type: SizesTypes) -> CGFloat {
+        var height: CGFloat = 0.0
+        let screenHeight = UIScreen.main.bounds.height
+        
+        switch type {
+            case .footer:
+                height = screenHeight / 1.927
+
+                if UIDevice().userInterfaceIdiom == .phone {
+                    switch UIScreen.main.nativeBounds.height {
+                        case 1334:
+                             height += 45.0
+
+                        default:
+                            break
+                    }
+                }
+            
+            case .resizedFooter:
+                height = screenHeight - (screenHeight / 5.5)
+            
+                if UIDevice().userInterfaceIdiom == .phone {
+                    switch UIScreen.main.nativeBounds.height {
+                        case 1334:
+                             height += 40.0
+
+                        default:
+                            break
+                    }
+                }
+            
+            case .header:
+                break
+        }
+
+        if UIDevice().userInterfaceIdiom == .phone {
+            switch UIScreen.main.nativeBounds.height {
+                case 1920, 2208:
+                    height += 51.0
+
+                default:
+                    break
+            }
+        }
+        
+        return height
     }
 }

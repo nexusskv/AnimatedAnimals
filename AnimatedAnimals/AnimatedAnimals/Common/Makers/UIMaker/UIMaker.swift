@@ -64,11 +64,23 @@ class UIMaker {
     
     
     /// ---> Function for make swipe up gesture recognizer  <--- ///
-    static func makeSwipeUp(_ object: AnyObject, and selector: Selector) -> UISwipeGestureRecognizer {
-        let swipeUp = UISwipeGestureRecognizer(target: object,
-                                               action: selector)
-        swipeUp.direction = .up
-        
-        return swipeUp
+    static func makeSwipeGesture(_ object: AnyObject, type: SwipeTypes, selector: Selector) -> UISwipeGestureRecognizer {
+        let swipeGesture = UISwipeGestureRecognizer(target: object,
+                                                    action: selector)
+        switch type {
+            case .up:
+                swipeGesture.direction = .up
+            
+            case .down:
+                swipeGesture.direction = .down
+            
+            case .right:
+                swipeGesture.direction = .right
+            
+            case .left:
+                swipeGesture.direction = .left
+        }
+                
+        return swipeGesture
     }
 }
