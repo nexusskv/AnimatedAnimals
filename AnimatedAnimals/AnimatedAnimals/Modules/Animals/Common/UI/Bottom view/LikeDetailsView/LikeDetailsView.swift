@@ -16,12 +16,22 @@ class LikeDetailsView: UIView {
     @IBOutlet weak var animalTitle: UILabel!
     @IBOutlet weak var likesImageView: UIImageView!
     @IBOutlet weak var animalLikes: UILabel!
-    
+    var viewModel: LikeDetailsViewModel!
     
     /// ---> View life cycle <--- ///
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        setupUI()
+        viewModel = LikeDetailsViewModel()
+        
+        viewModel.setupUI(self)
+    }
+    
+    
+    /// ---> Function for handle tap gesture  <--- ///
+    @objc func handleSwipe(_ sender: UISwipeGestureRecognizer) {
+        if sender.direction == .up || sender.direction == .down {
+            self.collapse()
+        }
     }
 }

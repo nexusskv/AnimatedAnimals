@@ -19,13 +19,13 @@ extension AnimalsContainerView: UIScrollViewDelegate {
     
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        handleScrolledView()
+        viewModel.handleScrolledView(self)
     }
     
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if !decelerate {
-            handleScrolledView()
+            viewModel.handleScrolledView(self)
         }
     }
 }

@@ -17,18 +17,29 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var totalLikes: UILabel!
     @IBOutlet weak var aboutWebView: WKWebView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    var viewModel: DetailsViewModel!
     
     /// ---> View life cycle <--- ///
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
+        viewModel = DetailsViewModel()
+        
+        viewModel.setupUI(self)
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        loadContent()
+        viewModel.loadContent(self)
+    }
+    
+    
+    /// ---> Function for handle swipe gesture <--- ///
+    @objc func handleSwipe(_ sender: UISwipeGestureRecognizer) {
+        if sender.direction == .left || sender.direction == .right || sender.direction == .up {
+            Router.dismiss(self)
+        }
     }
 }

@@ -14,7 +14,7 @@ extension LikesView: UITableViewDataSource {
             
     /// ---> Function from table view data source protocol  <--- ///
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = makeCell(tableView, at: indexPath)
+        let cell = viewModel.makeCell(self, table: tableView, at: indexPath)
 
         return cell
     }

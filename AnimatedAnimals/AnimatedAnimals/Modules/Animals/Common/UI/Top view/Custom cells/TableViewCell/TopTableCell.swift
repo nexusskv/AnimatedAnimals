@@ -13,4 +13,10 @@ import UIKit
 class TopTableCell: UITableViewCell {
     @IBOutlet weak var containerView: AnimalsContainerView!
 
+    /// ---> Function for set values to UI  <--- ///
+    func setValues(_ objects: [[AnimalObject]]) {
+        if let model = containerView.viewModel {
+            model.makeDataSource(containerView, objects: objects)
+        }
+    }
 }

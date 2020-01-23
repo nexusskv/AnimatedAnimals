@@ -14,12 +14,12 @@ extension AnimalsViewController: UIScrollViewDelegate {
     
     /// ---> Functions from scroll view delegate protocol <--- ///
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        handleDeceleratedScroll(scrollView)
+        viewModel.handleDeceleratedScroll(self, scroll: scrollView)
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if !decelerate {
-            handleDeceleratedScroll(scrollView)
+            viewModel.handleDeceleratedScroll(self, scroll: scrollView)
         }
     }
 }

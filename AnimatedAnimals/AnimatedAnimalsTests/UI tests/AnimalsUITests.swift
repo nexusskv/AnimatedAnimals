@@ -36,6 +36,9 @@ class AnimalsUITests: XCTestCase {
         XCTAssertNil(viewController.likeDetailsView,
                      "Before loading like details view should be nil.")
         
+        XCTAssertNil(viewController.viewModel,
+                     "Before loading view model should be nil.")
+        
         let _ = viewController.view
 
         XCTAssertNotNil(viewController.dataTable,
@@ -43,6 +46,9 @@ class AnimalsUITests: XCTestCase {
         
         XCTAssertNotNil(viewController.likeDetailsView,
                         "Like details view should be set.")
+        
+        XCTAssertNotNil(viewController.viewModel,
+                        "View model should be set.")
     }
     
     

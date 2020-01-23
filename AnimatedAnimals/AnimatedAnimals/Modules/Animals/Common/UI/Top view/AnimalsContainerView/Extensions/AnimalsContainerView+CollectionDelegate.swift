@@ -19,7 +19,7 @@ extension AnimalsContainerView: UICollectionViewDataSource {
     
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = makeCell(collectionView, at: indexPath)
+        let cell = viewModel.makeCell(self, collection: collectionView, at: indexPath)
         
         return cell
     }    

@@ -11,6 +11,8 @@ import UIKit
 
 
 class LikesCell: UITableViewCell {
+    var viewModel: LikesCellViewModel!
+    
     var iconImage : AsyncImageView = {
         let icon            = AsyncImageView()
         icon.contentMode    = .scaleAspectFill
@@ -41,7 +43,9 @@ class LikesCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        setupUI()
+        viewModel = LikesCellViewModel()
+        
+        viewModel.setupUI(self)
     }
     
     

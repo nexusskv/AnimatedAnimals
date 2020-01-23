@@ -45,6 +45,9 @@ class DetailsUITests: XCTestCase {
         XCTAssertNil(viewController.activityIndicator,
                      "Before loading activity indicator view should be nil.")
         
+        XCTAssertNil(viewController.viewModel,
+                     "Before loading view model should be nil.")
+               
         let _ = viewController.view
 
         XCTAssertNotNil(viewController.animalImage,
@@ -61,5 +64,8 @@ class DetailsUITests: XCTestCase {
         
         XCTAssertNotNil(viewController.activityIndicator,
                         "Activity indicator view should be set.")
+        
+        XCTAssertNotNil(viewController.viewModel,
+                        "View model should be set.")
     }
 }

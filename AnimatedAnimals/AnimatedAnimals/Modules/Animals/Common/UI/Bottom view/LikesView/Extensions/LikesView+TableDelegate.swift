@@ -19,6 +19,6 @@ extension LikesView: UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presentDetails(tableView, at: indexPath)
+        viewModel.presentDetails(self, table: tableView, at: indexPath)
     }
 }
